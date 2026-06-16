@@ -1,0 +1,182 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-cyan: var(--cyan);
+  --color-violet: var(--violet);
+  --color-magenta: var(--magenta);
+  --font-display: "Space Grotesk", system-ui, sans-serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+:root {
+  --radius: 0.75rem;
+  --background: oklch(0.13 0.02 270);
+  --foreground: oklch(0.97 0.01 270);
+  --card: oklch(0.18 0.025 270);
+  --card-foreground: oklch(0.97 0.01 270);
+  --popover: oklch(0.16 0.02 270);
+  --popover-foreground: oklch(0.97 0.01 270);
+  --primary: oklch(0.78 0.18 220);
+  --primary-foreground: oklch(0.13 0.02 270);
+  --secondary: oklch(0.22 0.03 270);
+  --secondary-foreground: oklch(0.97 0.01 270);
+  --muted: oklch(0.22 0.02 270);
+  --muted-foreground: oklch(0.68 0.03 270);
+  --accent: oklch(0.65 0.25 310);
+  --accent-foreground: oklch(0.97 0.01 270);
+  --destructive: oklch(0.65 0.22 25);
+  --destructive-foreground: oklch(0.97 0.01 270);
+  --border: oklch(1 0 0 / 8%);
+  --input: oklch(1 0 0 / 12%);
+  --ring: oklch(0.78 0.18 220);
+
+  --cyan: oklch(0.82 0.16 200);
+  --violet: oklch(0.65 0.25 290);
+  --magenta: oklch(0.7 0.26 340);
+
+  --gradient-primary: linear-gradient(135deg, oklch(0.78 0.18 220), oklch(0.65 0.25 290));
+  --gradient-accent: linear-gradient(135deg, oklch(0.65 0.25 290), oklch(0.7 0.26 340));
+  --gradient-glow: radial-gradient(circle at 50% 0%, oklch(0.65 0.25 290 / 0.35), transparent 60%);
+
+  --shadow-glow: 0 0 60px -10px oklch(0.65 0.25 290 / 0.5);
+  --shadow-elegant: 0 20px 60px -20px oklch(0 0 0 / 0.6);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+  ::selection {
+    background: oklch(0.65 0.25 290 / 0.4);
+    color: oklch(0.98 0.01 270);
+  }
+  ::-webkit-scrollbar { width: 8px; height: 8px; }
+  ::-webkit-scrollbar-track { background: oklch(0.13 0.02 270); }
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, oklch(0.78 0.18 220), oklch(0.65 0.25 290));
+    border-radius: 4px;
+  }
+}
+
+@utility glass {
+  background: oklch(1 0 0 / 0.04);
+  backdrop-filter: blur(20px) saturate(160%);
+  border: 1px solid oklch(1 0 0 / 0.08);
+}
+
+@utility glass-strong {
+  background: oklch(0.2 0.03 270 / 0.6);
+  backdrop-filter: blur(28px) saturate(180%);
+  border: 1px solid oklch(1 0 0 / 0.1);
+}
+
+@utility text-gradient {
+  background: var(--gradient-primary);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+@utility text-gradient-accent {
+  background: var(--gradient-accent);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+@utility bg-grid {
+  background-image:
+    linear-gradient(oklch(1 0 0 / 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, oklch(1 0 0 / 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+@utility glow {
+  box-shadow: var(--shadow-glow);
+}
+
+@utility magnetic-btn {
+  position: relative;
+  isolation: isolate;
+  background: var(--gradient-primary);
+  color: oklch(0.13 0.02 270);
+  font-weight: 600;
+  border-radius: 9999px;
+  padding: 0.85rem 1.75rem;
+  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.3s;
+  box-shadow: 0 10px 30px -10px oklch(0.65 0.25 290 / 0.6);
+}
+@utility magnetic-btn-hover {
+  &:hover {
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 20px 50px -15px oklch(0.65 0.25 290 / 0.8);
+  }
+}
+
+@keyframes blob {
+  0%, 100% { transform: translate(0,0) scale(1); }
+  33% { transform: translate(30px,-40px) scale(1.1); }
+  66% { transform: translate(-25px,30px) scale(0.95); }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@utility animate-blob { animation: blob 14s ease-in-out infinite; }
+@utility animate-float { animation: float 5s ease-in-out infinite; }
+@utility animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-shift 6s ease infinite;
+}
