@@ -117,8 +117,8 @@ export function Hero() {
               <Sparkles className="h-4 w-4" /> Hire Me
             </a>
             <a
-              href="/resume.pdf"
-              download
+              href="/Shabareesh_S_Gowda_Resume.pdf"
+              download="Shabareesh_S_Gowda_Resume.pdf"
               className="glass-strong inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-medium transition-all hover:bg-white/10"
             >
               <Download className="h-4 w-4" /> Download Resume
