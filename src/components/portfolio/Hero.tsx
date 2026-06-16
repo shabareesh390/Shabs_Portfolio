@@ -119,6 +119,7 @@ export function Hero() {
             <a
               href="/Shabareesh_S_Gowda_Resume.pdf"
               download="Shabareesh_S_Gowda_Resume.pdf"
+              target="_blank"
               className="glass-strong inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-medium transition-all hover:bg-white/10"
             >
               <Download className="h-4 w-4" /> Download Resume
