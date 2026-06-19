@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import { SectionHeader } from "./Section";
 import {
-  SiFlutter, SiDart, SiCplusplus, SiC, SiFirebase, SiGit, SiGithub, SiGoogle, SiAnthropic, SiCss, SiHtml5, SiJavascript,
+  SiFlutter, SiDart, SiCplusplus, SiC, SiFirebase, SiGit, SiGithub, SiGoogle, SiAnthropic, SiCss, SiHtml5, SiJavascript, SiSpringboot,
 } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
 import { Brain, Lightbulb, Globe, Package, Zap, Cloud, Database } from "lucide-react";
@@ -11,6 +11,7 @@ const skills = [
   { Icon: SiFlutter, name: "Flutter", level: 85, color: "#02569B" },
   { Icon: SiDart, name: "Dart", level: 82, color: "#0175C2" },
   { Icon: FaJava, name: "Java", level: 80, color: "#f89820" },
+  { Icon: SiSpringboot, name: "Spring Boot", level: 78, color: "#6DB33F" },
   { Icon: SiCplusplus, name: "C++", level: 75, color: "#00599C" },
   { Icon: SiC, name: "C", level: 78, color: "#A8B9CC" },
   { Icon: Brain, name: "DSA", level: 72, color: "#a78bfa" },

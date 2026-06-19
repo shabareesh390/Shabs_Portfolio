@@ -29,12 +29,16 @@ export function About() {
             className="glass-strong rounded-3xl p-8 md:p-10"
           >
             <p className="text-lg leading-relaxed text-foreground/90">
-              I'm a first-year{" "}
-              <span className="text-gradient font-semibold">Computer Science Engineering</span>{" "}
-              student at Mangalore Institute of Technology and Engineering. My
-              days are spent shipping Flutter apps, sharpening my fundamentals
-              in Java, C and C++, and crawling through Data Structures &
-              Algorithms one problem at a time.
+              Computer Science Engineering student at MITE with expertise in Flutter,
+              Java, Spring Boot, Firebase, artificial intelligence, and modern
+              software development. Experienced in designing and developing
+              innovative applications, including an AI-powered exam evaluation system
+              and an intelligent campus navigation platform. Skilled in building
+              scalable backend services, mobile applications, and user-focused
+              solutions. Demonstrates strong problem-solving abilities, software
+              engineering fundamentals, and the capability to independently deliver
+              end-to-end projects. Passionate about leveraging technology to solve
+              real-world challenges and create impactful digital products.
             </p>
             <p className="mt-4 leading-relaxed text-muted-foreground">
               I genuinely love turning real-world friction into clean, fast
