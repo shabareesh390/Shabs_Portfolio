@@ -11,7 +11,7 @@ const pillars = [
 
 export function About() {
   return (
-    <section id="about" className="relative py-28">
+    <section id="about" className="relative py-40">
       <div className="container mx-auto px-6">
         <SectionHeader
           eyebrow="About Me"
@@ -21,6 +21,7 @@ export function About() {
 
         <div className="grid gap-10 md:grid-cols-[1.1fr_1fr]">
           <motion.div
+            layout
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -62,6 +63,7 @@ export function About() {
           <div className="grid grid-cols-2 gap-4">
             {pillars.map((p, i) => (
               <motion.div
+                layout
                 key={p.t}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}

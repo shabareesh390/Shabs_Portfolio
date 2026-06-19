@@ -1,7 +1,9 @@
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { ArrowUpRight, Flame, Github, MapPin, Plus, Sparkles } from "lucide-react";
+import { ArrowUpRight, Brain, Flame, Github, MapPin, Plus, Sparkles } from "lucide-react";
 import { useRef } from "react";
 import { SectionHeader } from "./Section";
+import firenotesLogo from "@/assets/firenotes.png";
+import evalaILogo from "@/assets/evalai.png";
 
 type Project = {
   title: string;
@@ -13,6 +15,7 @@ type Project = {
   repo?: string;
   accent: string;
   upcoming?: boolean;
+  logo?: string;
 };
 
 const projects: Project[] = [
@@ -25,6 +28,17 @@ const projects: Project[] = [
     href: "https://github.com/shabareesh390/FireNotes.git",
     repo: "https://github.com/shabareesh390/FireNotes.git",
     accent: "linear-gradient(135deg, #fbbf24, #f97316)",
+    logo: firenotesLogo,
+  },
+  {
+    title: "EvalAI",
+    tag: "Shipped",
+    desc: "Developed a Flutter-based mobile application that automates the grading of handwritten student answer sheets using Google Gemini AI. The app analyzes answers, compares them with expected responses, assigns marks, and generates personalized feedback highlighting strengths, weaknesses, and missing concepts. Built with Firebase for secure authentication and report storage, it also includes performance analytics dashboards, PDF report generation, and customizable grading settings to streamline the evaluation process for educators.",
+    tech: ["Flutter", "Dart", "Google Gemini AI", "Firebase", "Provider", "fl_chart", "Google ML Kit", "PDF Generation", "Analytics"],
+    Icon: Brain,
+    repo: "https://github.com/shabareesh390/EvalAI",
+    accent: "linear-gradient(135deg, #6366f1, #8b5cf6)",
+    logo: evalaILogo,
   },
   {
     title: "PathPilot",
@@ -77,12 +91,16 @@ function ProjectCard({ p, i }: { p: Project; i: number }) {
         style={{ background: p.accent }}
       />
       <div className="relative flex items-start justify-between">
-        <div
-          className="flex h-14 w-14 items-center justify-center rounded-2xl"
-          style={{ background: p.accent }}
-        >
-          <p.Icon className="h-7 w-7 text-background" />
-        </div>
+        {p.logo ? (
+          <img src={p.logo} alt={p.title} className="h-14 w-14 rounded-2xl object-cover" />
+        ) : (
+          <div
+            className="flex h-14 w-14 items-center justify-center rounded-2xl"
+            style={{ background: p.accent }}
+          >
+            <p.Icon className="h-7 w-7 text-background" />
+          </div>
+        )}
         <span className="glass rounded-full px-3 py-1 text-[10px] uppercase tracking-widest text-muted-foreground">
           {p.tag}
         </span>

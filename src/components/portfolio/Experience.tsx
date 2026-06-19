@@ -3,9 +3,9 @@ import { Briefcase, Brain, Code2, Smartphone } from "lucide-react";
 import { SectionHeader } from "./Section";
 
 const roles = [
-  { Icon: Smartphone, title: "Flutter Internship", desc: "Cross-platform mobile apps with Dart, Firebase & clean architecture." },
   { Icon: Code2, title: "Software Development Internship", desc: "Java / C++ backends, tooling, or full-stack feature work." },
   { Icon: Brain, title: "AI / ML Learning Role", desc: "Eager to learn applied AI inside a real product team." },
+  { Icon: Smartphone, title: "Flutter Development", desc: "Cross-platform mobile apps with Dart, Firebase & clean architecture." },
 ];
 
 export function Experience() {
@@ -15,8 +15,23 @@ export function Experience() {
         <SectionHeader
           eyebrow="Experience"
           title={<>Currently seeking <span className="text-gradient">internships</span></>}
-          subtitle="Available immediately for remote, hybrid, or on-site opportunities."
+          subtitle="Available immediately for remote"
         />
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mx-auto mb-12 max-w-3xl space-y-4 text-center"
+        >
+          <p className="text-lg md:text-xl leading-relaxed font-semibold">
+            <span className="text-gradient">Independently designed and implemented</span> a full-stack cross-platform notes application using Flutter and Firebase with real-time synchronization through Cloud Firestore.
+          </p>
+          <p className="text-lg md:text-xl leading-relaxed font-semibold">
+            <span className="text-gradient">Independently developed</span> multimodal AI-based answer analysis, automated mark allocation, and personalized feedback generation including strengths, weaknesses, and missing concepts.
+          </p>
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, scale: 0.96 }}

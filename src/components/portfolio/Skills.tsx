@@ -4,7 +4,7 @@ import {
   SiFlutter, SiDart, SiCplusplus, SiC, SiFirebase, SiGit, SiGithub,
 } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
-import { Brain, Lightbulb } from "lucide-react";
+import { Brain, Lightbulb, Globe, Package, Zap } from "lucide-react";
 
 const skills = [
   { Icon: SiFlutter, name: "Flutter", level: 85, color: "#02569B" },
@@ -17,6 +17,9 @@ const skills = [
   { Icon: SiGit, name: "Git", level: 78, color: "#F05032" },
   { Icon: SiGithub, name: "GitHub", level: 80, color: "#ffffff" },
   { Icon: Lightbulb, name: "Problem Solving", level: 85, color: "#67e8f9" },
+  { Icon: Globe, name: "REST API", level: 75, color: "#3b82f6" },
+  { Icon: Package, name: "Provider", level: 78, color: "#10b981" },
+  { Icon: Zap, name: "Google ML Kit", level: 76, color: "#f59e0b" },
 ];
 
 export function Skills() {
