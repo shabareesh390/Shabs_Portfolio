@@ -1,10 +1,11 @@
+
 import { motion } from "framer-motion";
 import { SectionHeader } from "./Section";
 import {
-  SiFlutter, SiDart, SiCplusplus, SiC, SiFirebase, SiGit, SiGithub, SiCss, SiHtml5, SiJavascript, SiGoogle, SiAnthropic,
+  SiFlutter, SiDart, SiCplusplus, SiC, SiFirebase, SiGit, SiGithub,
 } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
-import { Brain, Lightbulb, Globe, Package, Zap, Cloud, Database } from "lucide-react";
+import { Brain, Lightbulb, Globe, Package, Zap } from "lucide-react";
 
 const skills = [
   { Icon: SiFlutter, name: "Flutter", level: 85, color: "#02569B" },
@@ -20,13 +21,6 @@ const skills = [
   { Icon: Globe, name: "REST API", level: 75, color: "#3b82f6" },
   { Icon: Package, name: "Provider", level: 78, color: "#10b981" },
   { Icon: Zap, name: "Google ML Kit", level: 76, color: "#f59e0b" },
-  { Icon: SiGoogle, name: "Google OAuth", level: 74, color: "#4285F4" },
-  { Icon: Cloud, name: "Cloud Firestore", level: 72, color: "#FF9800" },
-  { Icon: SiAnthropic, name: "Anthropic Claude", level: 70, color: "#8B5CF6" },
-  { Icon: SiCss, name: "CSS", level: 80, color: "#1572B6" },
-  { Icon: SiHtml5, name: "HTML", level: 82, color: "#E34F26" },
-  { Icon: SiJavascript, name: "JavaScript", level: 78, color: "#F7DF1E" },
-  { Icon: Database, name: "SQL", level: 76, color: "#3b82f6" },
 ];
 
 export function Skills() {
