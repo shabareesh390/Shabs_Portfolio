@@ -107,10 +107,18 @@ const ChevronLeft = createLucideIcon("ChevronLeft", [
 const ChevronRight = createLucideIcon("ChevronRight", [
   ["path", { d: "m9 18 6-6-6-6", key: "mthhwq" }]
 ]);
+const Cloud = createLucideIcon("Cloud", [
+  ["path", { d: "M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z", key: "p7xjir" }]
+]);
 const CodeXml = createLucideIcon("CodeXml", [
   ["path", { d: "m18 16 4-4-4-4", key: "1inbqp" }],
   ["path", { d: "m6 8-4 4 4 4", key: "15zrgr" }],
   ["path", { d: "m14.5 4-5 16", key: "e7oirm" }]
+]);
+const Database = createLucideIcon("Database", [
+  ["ellipse", { cx: "12", cy: "5", rx: "9", ry: "3", key: "msslwz" }],
+  ["path", { d: "M3 5V19A9 3 0 0 0 21 19V5", key: "1wlel7" }],
+  ["path", { d: "M3 12A9 3 0 0 0 21 12", key: "mv7ke4" }]
 ]);
 const Download = createLucideIcon("Download", [
   ["path", { d: "M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4", key: "ih7n3h" }],
@@ -280,13 +288,15 @@ export {
   Zap as Z,
   Lightbulb as a,
   Globe as b,
-  MapPin as c,
-  GraduationCap as d,
-  Briefcase as e,
-  Smartphone as f,
-  Award as g,
-  ChevronLeft as h,
-  ChevronRight as i,
-  Plus as j,
-  ArrowUpRight as k
+  Cloud as c,
+  Database as d,
+  MapPin as e,
+  GraduationCap as f,
+  Briefcase as g,
+  Smartphone as h,
+  Award as i,
+  ChevronLeft as j,
+  ChevronRight as k,
+  Plus as l,
+  ArrowUpRight as m
 };

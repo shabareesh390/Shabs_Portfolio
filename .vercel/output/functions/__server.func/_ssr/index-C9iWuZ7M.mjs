@@ -1,132 +1,9 @@
-import { Q as QueryClient } from "../_libs/tanstack__query-core.mjs";
-import { Q as QueryClientProvider } from "../_libs/tanstack__react-query.mjs";
-import { c as createRouter, a as createRootRouteWithContext, u as useRouter, L as Link, O as Outlet, H as HeadContent, S as Scripts, b as createFileRoute } from "../_libs/tanstack__react-router.mjs";
-import { r as reactExports, j as jsxRuntimeExports } from "../_libs/react.mjs";
-import { S as SiFlutter, a as SiDart, F as FaJava, b as SiCplusplus, c as SiC, d as SiFirebase, e as SiGit, f as SiGithub } from "../_libs/react-icons.mjs";
+import { j as jsxRuntimeExports, r as reactExports } from "../_libs/react.mjs";
+import { S as SiFlutter, a as SiDart, F as FaJava, b as SiCplusplus, c as SiC, d as SiFirebase, e as SiGit, f as SiGithub, g as SiGoogle, h as SiAnthropic, i as SiCss, j as SiHtml5, k as SiJavascript } from "../_libs/react-icons.mjs";
 import { A as AnimatePresence, m as motion, u as useMotionValue, a as useSpring, b as useScroll, c as useMotionValueEvent, d as useTransform } from "../_libs/framer-motion.mjs";
-import { S as Sparkles, D as Download, G as Github, L as Linkedin, M as Mail, A as ArrowDown, C as CodeXml, T as Target, R as Rocket, a as Lightbulb, B as Brain, b as Globe, P as Package, Z as Zap, F as Flame, c as MapPin, d as GraduationCap, e as Briefcase, f as Smartphone, E as ExternalLink, g as Award, h as ChevronLeft, i as ChevronRight, X, j as Plus, k as ArrowUpRight } from "../_libs/lucide-react.mjs";
-import "../_libs/tanstack__router-core.mjs";
-import "../_libs/tanstack__history.mjs";
-import "../_libs/cookie-es.mjs";
-import "../_libs/seroval.mjs";
-import "../_libs/seroval-plugins.mjs";
-import "node:stream/web";
-import "node:stream";
-import "../_libs/react-dom.mjs";
-import "util";
-import "crypto";
-import "async_hooks";
-import "stream";
-import "../_libs/isbot.mjs";
+import { S as Sparkles, D as Download, G as Github, L as Linkedin, M as Mail, A as ArrowDown, C as CodeXml, T as Target, R as Rocket, a as Lightbulb, B as Brain, b as Globe, P as Package, Z as Zap, c as Cloud, d as Database, F as Flame, e as MapPin, f as GraduationCap, g as Briefcase, h as Smartphone, E as ExternalLink, i as Award, j as ChevronLeft, k as ChevronRight, X, l as Plus, m as ArrowUpRight } from "../_libs/lucide-react.mjs";
 import "../_libs/motion-dom.mjs";
 import "../_libs/motion-utils.mjs";
-const appCss = "/assets/styles-Cxz2d4BI.css";
-function reportLovableError(error, context = {}) {
-  if (typeof window === "undefined") return;
-  window.__lovableEvents?.captureException?.(
-    error,
-    {
-      source: "react_error_boundary",
-      route: window.location.pathname,
-      ...context
-    },
-    {
-      mechanism: "react_error_boundary",
-      handled: false,
-      severity: "error"
-    }
-  );
-}
-function NotFoundComponent() {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex min-h-screen items-center justify-center bg-background px-4", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-md text-center", children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "text-7xl font-bold text-foreground", children: "404" }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "mt-4 text-xl font-semibold text-foreground", children: "Page not found" }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-2 text-sm text-muted-foreground", children: "The page you're looking for doesn't exist or has been moved." }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-6", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
-      Link,
-      {
-        to: "/",
-        className: "inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90",
-        children: "Go home"
-      }
-    ) })
-  ] }) });
-}
-function ErrorComponent({ error, reset }) {
-  console.error(error);
-  const router = useRouter();
-  reactExports.useEffect(() => {
-    reportLovableError(error, { boundary: "tanstack_root_error_component" });
-  }, [error]);
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex min-h-screen items-center justify-center bg-background px-4", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-md text-center", children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "text-xl font-semibold tracking-tight text-foreground", children: "This page didn't load" }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-2 text-sm text-muted-foreground", children: "Something went wrong on our end. You can try refreshing or head back home." }),
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-6 flex flex-wrap justify-center gap-2", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx(
-        "button",
-        {
-          onClick: () => {
-            router.invalidate();
-            reset();
-          },
-          className: "inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90",
-          children: "Try again"
-        }
-      ),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(
-        "a",
-        {
-          href: "/",
-          className: "inline-flex items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-accent",
-          children: "Go home"
-        }
-      )
-    ] })
-  ] }) });
-}
-const Route$1 = createRootRouteWithContext()({
-  head: () => ({
-    meta: [
-      { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "portfolio" },
-      { name: "description", content: "A premium, recruiter-focused personal portfolio website showcasing skills, projects, and experience." },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "portfolio" },
-      { property: "og:description", content: "A premium, recruiter-focused personal portfolio website showcasing skills, projects, and experience." },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:title", content: "portfolio" },
-      { name: "twitter:description", content: "A premium, recruiter-focused personal portfolio website showcasing skills, projects, and experience." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/513f7d55-8eec-44b5-aead-cb3a4d3d6542/id-preview-481c644c--17d3bbf9-2dff-4ac6-a64e-90291496bf02.lovable.app-1781148284607.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/513f7d55-8eec-44b5-aead-cb3a4d3d6542/id-preview-481c644c--17d3bbf9-2dff-4ac6-a64e-90291496bf02.lovable.app-1781148284607.png" }
-    ],
-    links: [
-      {
-        rel: "stylesheet",
-        href: appCss
-      }
-    ]
-  }),
-  shellComponent: RootShell,
-  component: RootComponent,
-  notFoundComponent: NotFoundComponent,
-  errorComponent: ErrorComponent
-});
-function RootShell({ children }) {
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs("html", { lang: "en", children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsx("head", { children: /* @__PURE__ */ jsxRuntimeExports.jsx(HeadContent, {}) }),
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("body", { children: [
-      children,
-      /* @__PURE__ */ jsxRuntimeExports.jsx(Scripts, {})
-    ] })
-  ] });
-}
-function RootComponent() {
-  const { queryClient } = Route$1.useRouteContext();
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(QueryClientProvider, { client: queryClient, children: /* @__PURE__ */ jsxRuntimeExports.jsx(Outlet, {}) });
-}
 function Loader() {
   const [done, setDone] = reactExports.useState(false);
   reactExports.useEffect(() => {
@@ -704,7 +581,14 @@ const skills = [
   { Icon: Lightbulb, name: "Problem Solving", level: 85, color: "#67e8f9" },
   { Icon: Globe, name: "REST API", level: 75, color: "#3b82f6" },
   { Icon: Package, name: "Provider", level: 78, color: "#10b981" },
-  { Icon: Zap, name: "Google ML Kit", level: 76, color: "#f59e0b" }
+  { Icon: Zap, name: "Google ML Kit", level: 76, color: "#f59e0b" },
+  { Icon: SiGoogle, name: "Google OAuth", level: 74, color: "#4285F4" },
+  { Icon: Cloud, name: "Cloud Firestore", level: 72, color: "#FF9800" },
+  { Icon: SiAnthropic, name: "Anthropic Claude", level: 70, color: "#8B5CF6" },
+  { Icon: SiCss, name: "CSS", level: 80, color: "#1572B6" },
+  { Icon: SiHtml5, name: "HTML", level: 82, color: "#E34F26" },
+  { Icon: SiJavascript, name: "JavaScript", level: 78, color: "#F7DF1E" },
+  { Icon: Database, name: "SQL", level: 76, color: "#3b82f6" }
 ];
 function Skills() {
   return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { id: "skills", className: "relative py-28", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto px-6", children: [
@@ -1399,31 +1283,6 @@ function Footer() {
     )) })
   ] }) });
 }
-const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Shabareesh S Gowda — Flutter & Software Developer" },
-      {
-        name: "description",
-        content: "Portfolio of Shabareesh S Gowda — CSE student, Flutter & Java developer. Open for 2026 internships in mobile, full-stack and AI."
-      },
-      { property: "og:title", content: "Shabareesh S Gowda — Flutter & Software Developer" },
-      { property: "og:description", content: "Portfolio · Flutter · Java · DSA · Open for internships." },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "/" }
-    ],
-    links: [
-      { rel: "canonical", href: "/" },
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
-      }
-    ]
-  }),
-  component: Index
-});
 function Index() {
   return /* @__PURE__ */ jsxRuntimeExports.jsxs("main", { className: "relative", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx(Loader, {}),
@@ -1443,25 +1302,6 @@ function Index() {
     /* @__PURE__ */ jsxRuntimeExports.jsx(Footer, {})
   ] });
 }
-const IndexRoute = Route.update({
-  id: "/",
-  path: "/",
-  getParentRoute: () => Route$1
-});
-const rootRouteChildren = {
-  IndexRoute
-};
-const routeTree = Route$1._addFileChildren(rootRouteChildren)._addFileTypes();
-const getRouter = () => {
-  const queryClient = new QueryClient();
-  const router = createRouter({
-    routeTree,
-    context: { queryClient },
-    scrollRestoration: true,
-    defaultPreloadStaleTime: 0
-  });
-  return router;
-};
 export {
-  getRouter
+  Index as component
 };

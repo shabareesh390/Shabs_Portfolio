@@ -1,6 +1,6 @@
 import { AsyncLocalStorage } from "node:async_hooks";
 import { H as H3Event, t as toResponse } from "../_libs/h3-v2.mjs";
-import { x as defineHandlerCallback, y as resolveManifestAssetLink, t as resolveManifestCssLink, j as rootRouteId, z as getNormalizedURL, A as getOrigin, C as normalizeSsrResponse, D as attachRouterServerSsrUtils, E as createSerializationAdapter, F as createRawStreamRPCPlugin, i as invariant, c as isNotFound, l as isRedirect, G as isResolvedRedirect, H as replaceSsrResponse, I as mergeHeaders, J as executeRewriteInput, K as stripSsrResponseBody, L as defaultSerovalPlugins, M as makeSerovalPlugin, q as getScriptPreloadAttrs, N as getStylesheetHref, O as isSsrResponse } from "../_libs/tanstack__router-core.mjs";
+import { y as defineHandlerCallback, z as resolveManifestAssetLink, u as resolveManifestCssLink, k as rootRouteId, A as getNormalizedURL, C as getOrigin, D as normalizeSsrResponse, E as attachRouterServerSsrUtils, F as createSerializationAdapter, G as createRawStreamRPCPlugin, i as invariant, g as isNotFound, m as isRedirect, H as isResolvedRedirect, I as replaceSsrResponse, J as mergeHeaders, K as executeRewriteInput, L as stripSsrResponseBody, M as defaultSerovalPlugins, N as makeSerovalPlugin, s as getScriptPreloadAttrs, O as getStylesheetHref, P as isSsrResponse } from "../_libs/tanstack__router-core.mjs";
 import { i as iu, P as Pu, s as su } from "../_libs/seroval.mjs";
 import { c as createMemoryHistory } from "../_libs/tanstack__history.mjs";
 import { j as jsxRuntimeExports } from "../_libs/react.mjs";
@@ -81,7 +81,7 @@ function getResponse() {
 }
 var HEADERS = { TSS_SHELL: "X-TSS_SHELL" };
 async function getStartManifest(matchedRoutes) {
-  const { tsrStartManifest } = await import("../_tanstack-start-manifest_v-D9hBwLKu.mjs");
+  const { tsrStartManifest } = await import("../_tanstack-start-manifest_v-UAp4vjl-.mjs");
   const startManifest = tsrStartManifest();
   let routes = startManifest.routes;
   routes[rootRouteId];
@@ -1158,8 +1158,8 @@ var getBaseManifest = getProdBaseManifest;
 var createEarlyHintsForRequest = createEarlyHintsCollector;
 async function loadEntries() {
   const [routerEntry, startEntry, pluginAdapters] = await Promise.all([
-    import("./router-B7l_t1LF.mjs"),
-    import("./start-BCwmgx_2.mjs"),
+    import("./router-B0nEE2un.mjs"),
+    import("./start-Q6bmx1ab.mjs"),
     import("./empty-plugin-adapters-BFgPZ6_d.mjs")
   ]);
   return {
