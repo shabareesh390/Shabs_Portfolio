@@ -52,7 +52,7 @@ export function About() {
             <div className="mt-8 grid grid-cols-2 gap-3 text-sm">
               {[
                 ["Name", "Shabareesh S Gowda"],
-                ["Location", "Puttur, Karnataka"],
+                ["Location", "Mangalore, Karnataka"],
                 ["Degree", "B.E. CSE · 2025–29"],
                 ["Status", "Open to Internships"],
               ].map(([k, v]) => (

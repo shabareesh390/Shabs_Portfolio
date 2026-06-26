@@ -86,7 +86,7 @@ export function Contact() {
                 <Mail className="h-5 w-5 text-cyan" /> shabareesh390@gmail.com
               </a>
               <div className="flex items-center gap-3">
-                <MapPin className="h-5 w-5 text-cyan" /> Puttur, Karnataka, India
+                <MapPin className="h-5 w-5 text-cyan" /> Mangalore, Karnataka, India
               </div>
               <a href="https://www.linkedin.com/in/shabareesh-s-gowda-a78490381"
                  target="_blank" rel="noopener noreferrer"
