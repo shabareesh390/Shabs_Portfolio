@@ -29,7 +29,7 @@ const skills = [
   { Icon: SiCss, name: "CSS", level: 80, color: "#1572B6" },
   { Icon: SiHtml5, name: "HTML", level: 82, color: "#E34F26" },
   { Icon: SiJavascript, name: "JavaScript", level: 78, color: "#F7DF1E" },
-  { Icon: SiTypescript, name: "TypeScript", level: 82, color: "#3178C6" },
+  { Icon: SiTypescript, name: "TypeScript", level: 50, color: "#3178C6" },
   { Icon: Database, name: "SQL", level: 76, color: "#3b82f6" },
 ];
 
