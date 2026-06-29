@@ -5,6 +5,7 @@ import { SectionHeader } from "./Section";
 import certWebDash from "@/assets/cert-webdash.png";
 import certInfosys from "@/assets/cert-infosys-c.png";
 import certInfosysAI from "@/assets/cert-infosys-ai.png";
+import certDeloitte from "@/assets/deloitte_cert.png";
 
 type Certificate = {
   title: string;
@@ -16,6 +17,14 @@ type Certificate = {
 };
 
 const certificates: Certificate[] = [
+  {
+    title: "Deloitte Certificate",
+    issuer: "Deloitte",
+    date: "June 2026",
+    image: certDeloitte,
+    tag: "Certification",
+    accent: "linear-gradient(135deg, #f59e0b, #ef4444)",
+  },
   {
     title: "WEB DASH 3.0 — Participation",
     issuer: "MITE · Dept. of CSE (IoT & Cyber Security with Blockchain)",

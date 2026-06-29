@@ -3,8 +3,11 @@ import { Briefcase, Brain, Code2, Smartphone } from "lucide-react";
 import { SectionHeader } from "./Section";
 
 const roles = [
-  { Icon: Code2, title: "Software Development Internship", desc: "Java / C++ backends, tooling, or full-stack feature work." },
-  { Icon: Brain, title: "AI / ML Learning Role", desc: "Eager to learn applied AI inside a real product team." },
+  {
+    Icon: Briefcase,
+    title: "Technology Analyst Virtual Intern",
+    desc: "Internship • Deloitte • Remote\nCompleted Deloitte's Technology Analyst Virtual Internship on Forage, gaining hands-on experience in client data reconciliation and software development proposal writing.\n• Developed Python scripts to convert IIoT telemetry data from two different JSON formats into a unified output format, with all unit tests passing successfully.\n• Authored a formal software development proposal for a real-time manufacturing status dashboard for Daikibo Industrials, covering project scope, man-hour estimates, timeline, and post-delivery support.",
+  },
   { Icon: Smartphone, title: "Flutter Development", desc: "Cross-platform mobile apps with Dart, Firebase & clean architecture." },
 ];
 
@@ -25,6 +28,9 @@ export function Experience() {
           transition={{ duration: 0.6 }}
           className="mx-auto mb-12 max-w-3xl space-y-4 text-center"
         >
+          <p className="text-lg md:text-xl leading-relaxed font-semibold">
+            <span className="text-gradient">Completed Deloitte's Technology Analyst Virtual Internship</span> on Forage, gaining hands-on experience in client data reconciliation and software development proposal writing.
+          </p>
           <p className="text-lg md:text-xl leading-relaxed font-semibold">
             <span className="text-gradient">Independently designed and implemented</span> a full-stack cross-platform notes application using Flutter and Firebase with real-time synchronization through Cloud Firestore.
           </p>
@@ -68,7 +74,7 @@ export function Experience() {
               >
                 <r.Icon className="h-7 w-7 text-cyan transition-transform group-hover:scale-110" />
                 <h4 className="mt-4 font-display text-lg font-semibold">{r.title}</h4>
-                <p className="mt-1 text-sm text-muted-foreground">{r.desc}</p>
+                <p className="mt-1 whitespace-pre-line text-sm text-muted-foreground">{r.desc}</p>
               </motion.div>
             ))}
           </div>
