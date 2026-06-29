@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
-import { Briefcase, Brain, Code2, Smartphone } from "lucide-react";
-import { SectionHeader } from "./Section";
+import { Briefcase, Smartphone } from "lucide-react";
 
 const roles = [
   {
@@ -15,11 +14,20 @@ export function Experience() {
   return (
     <section id="experience" className="relative py-28">
       <div className="container mx-auto px-6">
-        <SectionHeader
-          eyebrow="Experience"
-          title={<>Currently seeking <span className="text-gradient">internships</span></>}
-          subtitle="Available immediately for remote"
-        />
+        <motion.div
+          layout
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.7 }}
+          className="mx-auto mb-14 max-w-2xl text-center"
+        >
+          <p className="text-[11px] uppercase tracking-[0.2em] text-muted-foreground">Experience</p>
+          <h2 className="mt-4 font-display text-4xl font-bold md:text-5xl">
+            Currently seeking <span className="text-gradient">internships</span>
+          </h2>
+          <p className="mt-3 text-muted-foreground">Available immediately for remote</p>
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -28,13 +36,13 @@ export function Experience() {
           transition={{ duration: 0.6 }}
           className="mx-auto mb-12 max-w-3xl space-y-4 text-center"
         >
-          <p className="text-lg md:text-xl leading-relaxed font-semibold">
+          <p className="text-xl md:text-2xl leading-relaxed font-semibold">
             <span className="text-gradient">Completed Deloitte's Technology Analyst Virtual Internship</span> on Forage, gaining hands-on experience in client data reconciliation and software development proposal writing.
           </p>
-          <p className="text-lg md:text-xl leading-relaxed font-semibold">
+          <p className="text-xl md:text-2xl leading-relaxed font-semibold">
             <span className="text-gradient">Independently designed and implemented</span> a full-stack cross-platform notes application using Flutter and Firebase with real-time synchronization through Cloud Firestore.
           </p>
-          <p className="text-lg md:text-xl leading-relaxed font-semibold">
+          <p className="text-xl md:text-2xl leading-relaxed font-semibold">
             <span className="text-gradient">Independently developed</span> multimodal AI-based answer analysis, automated mark allocation, and personalized feedback generation including strengths, weaknesses, and missing concepts.
           </p>
         </motion.div>
@@ -56,7 +64,7 @@ export function Experience() {
               </div>
               <div>
                 <h3 className="font-display text-2xl font-bold">Open for Opportunities</h3>
-                <p className="text-sm text-muted-foreground">2026 Internship · Remote / On-site</p>
+                <p className="text-base text-muted-foreground">2026 Internship · Remote / On-site</p>
               </div>
             </div>
             <a href="#contact" className="magnetic-btn magnetic-btn-hover">Reach Out</a>
@@ -73,8 +81,8 @@ export function Experience() {
                 className="glass group rounded-2xl p-5 transition-all hover:bg-white/[0.08]"
               >
                 <r.Icon className="h-7 w-7 text-cyan transition-transform group-hover:scale-110" />
-                <h4 className="mt-4 font-display text-lg font-semibold">{r.title}</h4>
-                <p className="mt-1 whitespace-pre-line text-sm text-muted-foreground">{r.desc}</p>
+                <h4 className="mt-4 font-display text-xl font-semibold">{r.title}</h4>
+                <p className="mt-1 whitespace-pre-line text-base leading-relaxed text-muted-foreground">{r.desc}</p>
               </motion.div>
             ))}
           </div>
