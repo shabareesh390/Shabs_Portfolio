@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { SectionHeader } from "./Section";
 import {
   SiFlutter, SiDart, SiCplusplus, SiC, SiFirebase, SiGit, SiGithub, SiGoogle, SiAnthropic, SiCss, SiHtml5, SiJavascript, SiSpringboot,
-  SiTypescript,
+  SiTypescript, SiSupabase,
 } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
 import { Brain, Lightbulb, Globe, Package, Zap, Cloud, Database } from "lucide-react";
@@ -17,6 +17,7 @@ const skills = [
   { Icon: SiC, name: "C", level: 78, color: "#A8B9CC" },
   { Icon: Brain, name: "DSA", level: 72, color: "#a78bfa" },
   { Icon: SiFirebase, name: "Firebase", level: 70, color: "#FFCA28" },
+  { Icon: SiSupabase, name: "Supabase", level: 70, color: "#3ECF8E" },
   { Icon: SiGit, name: "Git", level: 78, color: "#F05032" },
   { Icon: SiGithub, name: "GitHub", level: 80, color: "#ffffff" },
   { Icon: Lightbulb, name: "Problem Solving", level: 85, color: "#67e8f9" },
