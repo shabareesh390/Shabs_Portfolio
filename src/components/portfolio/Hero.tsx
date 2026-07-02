@@ -152,7 +152,7 @@ export function Hero() {
           >
             {[
               { v: "9+", l: "Core Tech" },
-              { v: "2", l: "2 projects shipped" },
+              { v: "2", l: "projects shipped" },
               { v: "2nd Yr", l: "B.E. CSE" },
             ].map((s) => (
               <div key={s.l} className="glass rounded-xl p-3 text-center">
