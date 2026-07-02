@@ -7,7 +7,7 @@ const items = [
     period: "2025 — 2029",
     school: "Mangalore Institute of Technology and Engineering (MITE)",
     degree: "B.E. Computer Science Engineering",
-    note: "Currently in 1st year. Focused on DSA, app development & engineering fundamentals.",
+    note: "Currently in 2nd year. Focused on DSA, app development & engineering fundamentals.",
   },
   {
     period: "2023 — 2025",
