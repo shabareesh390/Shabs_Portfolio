@@ -6,6 +6,7 @@ import certWebDash from "@/assets/cert-webdash.png";
 import certInfosys from "@/assets/cert-infosys-c.png";
 import certInfosysAI from "@/assets/cert-infosys-ai.png";
 import certDeloitte from "@/assets/deloitte_cert.png";
+import certCampusCrew from "@/assets/CampusCrew_Cert.jpeg";
 
 type Certificate = {
   title: string;
@@ -48,6 +49,14 @@ const certificates: Certificate[] = [
     image: certInfosysAI,
     tag: "Course",
     accent: "linear-gradient(135deg, #67e8f9, #818cf8)",
+  },
+  {
+    title: "CampusCrew Certificate",
+    issuer: "CampusCrew",
+    date: "July 2026",
+    image: certCampusCrew,
+    tag: "Certification",
+    accent: "linear-gradient(135deg, #22c55e, #3b82f6)",
   },
 ];
 
