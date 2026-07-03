@@ -50,8 +50,8 @@ export function Experience() {
                 <Briefcase className="h-6 w-6 text-background" />
               </div>
               <div>
-                <h3 className="font-display text-2xl font-bold">Open for Opportunities</h3>
-                <p className="text-base text-muted-foreground">2026 Internship · Remote / On-site</p>
+                <h3 className="font-display text-2xl font-bold">Professional Experience</h3>
+                {/* <p className="text-base text-muted-foreground">2026 Internship · Remote / On-site</p> */}
               </div>
             </div>
             <a href="#contact" className="magnetic-btn magnetic-btn-hover">Reach Out</a>
