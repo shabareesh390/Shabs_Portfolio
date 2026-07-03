@@ -3,6 +3,7 @@ import { Briefcase, Server, Smartphone, ExternalLink, Github, Award } from "luci
 
 import deloitteCert from "../../assets/deloitte_cert.png";
 import jpMorganCert from "../../assets/JPMorganChase_Cert.png";
+import walmartCert from "../../assets/walmart_Cert.png";
 
 interface ExperienceLink {
   certificate?: string;
@@ -25,6 +26,26 @@ interface Experience {
 }
 
 const experiences: Experience[] = [
+  {
+    id: "walmart",
+    role: "Advanced Software Engineer Virtual Intern",
+    company: "Walmart",
+    logo: Briefcase,
+    date: "Completed",
+    location: "Remote",
+    type: "Internship",
+    status: "Completed",
+    bullets: [
+      "Completed the Advanced Software Engineering Job Simulation where I solved difficult technical projects for a variety of teams at Walmart.",
+      "Developed a novel version of a heap data structure in Java for Walmart’s shipping department, showcasing strong problem-solving and algorithmic skills.",
+      "Designed a UML class diagram for a data processor, considering different operating modes and database connections.",
+      "Created an entity relationship diagram to design a new database accounting for all requirements provided by Walmart’s pet department."
+    ],
+    techStack: ["Data Preprocessing", "Data Structures", "Database Design", "Java Programming", "Process Optimization", "Python Programming", "Software Architecture", "SQL Database", "UML Modeling"],
+    links: {
+      certificate: walmartCert,
+    }
+  },
   {
     id: "deloitte",
     role: "Technology Analyst Virtual Intern",

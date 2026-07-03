@@ -8,6 +8,7 @@ import certInfosysAI from "@/assets/cert-infosys-ai.png";
 import certDeloitte from "@/assets/deloitte_cert.png";
 import certJPMorganChase from "@/assets/JPMorganChase_Cert.png";
 import certCampusCrew from "@/assets/CampusCrew_Cert.jpeg";
+import certWalmart from "@/assets/walmart_Cert.png";
 
 type Certificate = {
   title: string;
@@ -34,6 +35,14 @@ const certificates: Certificate[] = [
     image: certJPMorganChase,
     tag: "Certification",
     accent: "linear-gradient(135deg, #0d4a8b, #2f80ed)",
+  },
+  {
+    title: "Advanced Software Engineer Virtual Intern",
+    issuer: "Walmart",
+    date: "July 2026",
+    image: certWalmart,
+    tag: "Certification",
+    accent: "linear-gradient(135deg, #0ea5e9, #2563eb)",
   },
   {
     title: "WEB DASH 3.0 — Participation",
