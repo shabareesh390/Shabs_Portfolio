@@ -1,23 +1,98 @@
 import { motion } from "framer-motion";
-import { Briefcase, Smartphone } from "lucide-react";
+import { Briefcase, Server, Smartphone, ExternalLink, Github, Award } from "lucide-react";
 
-const roles = [
+import deloitteCert from "../../assets/deloitte_cert.png";
+import jpMorganCert from "../../assets/JPMorganChase_Cert.png";
+
+interface ExperienceLink {
+  certificate?: string;
+  project?: string;
+  github?: string;
+}
+
+interface Experience {
+  id: string;
+  role: string;
+  company: string;
+  logo: React.ElementType;
+  date: string;
+  location: string;
+  type: string;
+  status: string;
+  bullets: string[];
+  techStack: string[];
+  links?: ExperienceLink;
+}
+
+const experiences: Experience[] = [
   {
-    Icon: Briefcase,
-    title: "Technology Analyst Virtual Intern",
-    desc: "Internship • Deloitte • Remote\nCompleted Deloitte's Technology Analyst Virtual Internship on Forage, gaining hands-on experience in client data reconciliation and software development proposal writing.\n• Developed Python scripts to convert IIoT telemetry data from two different JSON formats into a unified output format, with all unit tests passing successfully.\n• Authored a formal software development proposal for a real-time manufacturing status dashboard for Daikibo Industrials, covering project scope, man-hour estimates, timeline, and post-delivery support.",
+    id: "deloitte",
+    role: "Technology Analyst Virtual Intern",
+    company: "Deloitte",
+    logo: Briefcase,
+    date: "Completed",
+    location: "Remote",
+    type: "Internship",
+    status: "Completed",
+    bullets: [
+      "Completed virtual internship focusing on data reconciliation and proposals.",
+      "Developed Python scripts to convert IIoT telemetry data between JSON formats.",
+      "Ensured high code quality with all unit tests passing successfully.",
+      "Authored a formal software development proposal for a manufacturing dashboard.",
+      "Outlined project scope, man-hour estimates, timeline, and support.",
+    ],
+    techStack: ["Python", "JSON", "Data Analysis", "Proposal Writing"],
+    links: {
+      certificate: deloitteCert,
+    }
   },
   {
-    Icon: Briefcase,
-    title: "Software Engineer Virtual Intern",
-    desc: "Remote virtual internship • Enterprise software engineering simulation focused on backend architecture and distributed systems.\n\n• Engineered a transaction processing backend utilizing Java and the Spring Boot framework.\n\n• Implemented real-time event streaming with Apache Kafka to consume and process transaction data.\n\n• Designed entity schemas and managed database persistence using Spring Data JPA and H2.\n\n• Integrated external microservices into the transaction pipeline via REST APIs using RestTemplate.\n\n• Developed and exposed custom RESTful endpoints to securely query and surface database records.",
+    id: "swe-intern",
+    role: "Software Engineer Virtual Intern",
+    company: "JPMorganChase",
+    logo: Server,
+    date: "Completed",
+    location: "Remote",
+    type: "Internship",
+    status: "Completed",
+    bullets: [
+      "Engineered a transaction processing backend utilizing Java and Spring Boot.",
+      "Implemented real-time event streaming with Apache Kafka for data processing.",
+      "Designed entity schemas and managed database persistence with Spring Data JPA.",
+      "Integrated external microservices into the transaction pipeline via REST APIs.",
+      "Developed custom RESTful endpoints to securely query database records.",
+    ],
+    techStack: ["Java", "Spring Boot", "Apache Kafka", "REST API", "H2"],
+    links: {
+      certificate: jpMorganCert,
+    }
   },
-  { Icon: Smartphone, title: "Flutter Development", desc: "Cross-platform mobile apps with Dart, Firebase & clean architecture." },
+  {
+    id: "flutter",
+    role: "Flutter Developer",
+    company: "Independent Projects",
+    logo: Smartphone,
+    date: "Ongoing",
+    location: "Remote",
+    type: "Freelance",
+    status: "Ongoing",
+    bullets: [
+      "Built scalable Flutter applications.",
+      "Integrated Firebase Authentication.",
+      "Developed REST API features.",
+      "Implemented state management.",
+      "Collaborated using Git & GitHub.",
+    ],
+    techStack: ["Flutter", "Firebase", "REST API", "Git", "Hive", "Provider"],
+    links: {
+      github: "https://github.com/shabareesh390?tab=repositories",
+    }
+  },
 ];
 
 export function Experience() {
   return (
-    <section id="experience" className="relative py-28">
+    <section id="experience" className="relative py-28 md:py-36">
       <div className="container mx-auto px-6">
         <motion.div
           layout
@@ -25,55 +100,108 @@ export function Experience() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.7 }}
-          className="mx-auto mb-14 max-w-2xl text-center"
+          className="mx-auto mb-20 max-w-3xl text-center"
         >
-          <p className="text-[11px] uppercase tracking-[0.2em] text-muted-foreground">Experience</p>
-          <h2 className="mt-4 font-display text-4xl font-bold md:text-5xl">
-            Currently seeking <span className="text-gradient">internships</span>
+          <h2 className="font-display text-4xl font-bold md:text-5xl">
+            Experience
           </h2>
-          <p className="mt-3 text-muted-foreground">Available immediately for remote</p>
+          <p className="mt-6 text-base text-muted-foreground md:text-lg">
+            Professional experience, internships, certifications, and impactful contributions.
+          </p>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, scale: 0.96 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="glass-strong relative overflow-hidden rounded-3xl p-8 md:p-12"
-        >
-          <div className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full opacity-30 blur-3xl"
-               style={{ background: "var(--gradient-primary)" }} />
-          <div className="flex flex-wrap items-center justify-between gap-4">
-            <div className="flex items-center gap-3">
-              <div className="flex h-12 w-12 items-center justify-center rounded-2xl"
-                   style={{ background: "var(--gradient-primary)" }}>
-                <Briefcase className="h-6 w-6 text-background" />
-              </div>
-              <div>
-                <h3 className="font-display text-2xl font-bold">Professional Experience</h3>
-                {/* <p className="text-base text-muted-foreground">2026 Internship · Remote / On-site</p> */}
-              </div>
-            </div>
-            <a href="#contact" className="magnetic-btn magnetic-btn-hover">Reach Out</a>
-          </div>
+        <div className="relative mx-auto max-w-3xl">
+          {/* Vertical Line */}
+          <div className="absolute left-[19px] top-6 bottom-0 w-[2px] bg-white/10" />
 
-          <div className="mt-10 grid gap-4 md:grid-cols-3">
-            {roles.map((r, i) => (
+          <div className="space-y-12 md:space-y-16">
+            {experiences.map((exp, index) => (
               <motion.div
-                key={r.title}
-                initial={{ opacity: 0, y: 20 }}
+                key={exp.id}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="glass group rounded-2xl p-5 transition-all hover:bg-white/[0.08]"
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="relative pl-14 md:pl-20"
               >
-                <r.Icon className="h-7 w-7 text-cyan transition-transform group-hover:scale-110" />
-                <h4 className="mt-4 font-display text-xl font-semibold">{r.title}</h4>
-                <p className="mt-1 whitespace-pre-line text-base leading-relaxed text-muted-foreground">{r.desc}</p>
+                {/* Timeline Dot with Pulse Animation */}
+                <div className="absolute left-[15px] top-8 flex items-center justify-center">
+                  <motion.div
+                    animate={{ scale: [1, 1.2, 1], opacity: [0.5, 1, 0.5] }}
+                    transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                    className="absolute h-4 w-4 rounded-full bg-violet/30"
+                  />
+                  <div className="relative h-2.5 w-2.5 rounded-full bg-violet" style={{ boxShadow: '0 0 10px var(--color-violet)' }} />
+                </div>
+
+                {/* Card */}
+                <div className="glass group relative flex flex-col gap-5 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:bg-white/[0.04] md:p-8 shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
+                  {/* Top Row */}
+                  <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+                    <div className="flex items-start gap-4">
+                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-violet transition-transform duration-300 group-hover:scale-110">
+                        <exp.logo className="h-6 w-6" />
+                      </div>
+                      <div className="flex flex-col">
+                        <h3 className="text-xl font-bold text-foreground">{exp.role}</h3>
+                        <div className="text-base font-medium text-foreground/80">{exp.company}</div>
+                      </div>
+                    </div>
+                    <div className="flex flex-row items-center gap-3 sm:flex-col sm:items-end sm:gap-1.5">
+                      <span className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold ${exp.status === 'Completed' ? 'bg-green-500/10 text-green-400' : 'bg-violet/10 text-violet'}`}>
+                        {exp.status}
+                      </span>
+                      <span className="text-sm text-muted-foreground">
+                        {exp.date} • {exp.location} • {exp.type}
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Middle (Bullets) */}
+                  <ul className="mt-2 space-y-2.5 text-base text-muted-foreground">
+                    {exp.bullets.map((bullet, i) => (
+                      <li key={i} className="flex items-start gap-3">
+                        <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-violet/50" />
+                        <span className="leading-relaxed">{bullet}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  {/* Bottom (Tech Stack & Buttons) */}
+                  <div className="mt-4 flex flex-col gap-5 border-t border-white/5 pt-6 sm:flex-row sm:items-center sm:justify-between">
+                    <div className="flex flex-wrap gap-2">
+                      {exp.techStack.map(tech => (
+                        <span key={tech} className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-foreground transition-colors hover:bg-white/10">
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+
+                    {exp.links && (
+                      <div className="flex flex-wrap items-center gap-3">
+                        {exp.links.certificate && (
+                          <a href={exp.links.certificate} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-sm font-medium transition-colors hover:bg-white/10 hover:text-violet">
+                            <Award className="h-4 w-4" /> View Certificate
+                          </a>
+                        )}
+                        {exp.links.project && (
+                          <a href={exp.links.project} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-sm font-medium transition-colors hover:bg-white/10 hover:text-violet">
+                            <ExternalLink className="h-4 w-4" /> View Project
+                          </a>
+                        )}
+                        {exp.links.github && (
+                          <a href={exp.links.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-sm font-medium transition-colors hover:bg-white/10 hover:text-violet">
+                            <Github className="h-4 w-4" /> GitHub
+                          </a>
+                        )}
+                      </div>
+                    )}
+                  </div>
+                </div>
               </motion.div>
             ))}
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
