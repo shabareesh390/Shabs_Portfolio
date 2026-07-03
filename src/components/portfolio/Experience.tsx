@@ -189,7 +189,7 @@ export function Experience() {
                   </ul>
 
                   {/* Bottom (Tech Stack & Buttons) */}
-                  <div className="mt-4 flex flex-col gap-5 border-t border-white/5 pt-6 sm:flex-row sm:items-center sm:justify-between">
+                  <div className="mt-4 flex flex-col gap-5 border-t border-white/5 pt-6 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
                     <div className="flex flex-wrap gap-2">
                       {exp.techStack.map(tech => (
                         <span key={tech} className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-foreground transition-colors hover:bg-white/10">
@@ -199,19 +199,19 @@ export function Experience() {
                     </div>
 
                     {exp.links && (
-                      <div className="flex flex-wrap items-center gap-3">
+                      <div className="flex shrink-0 flex-wrap items-center gap-3">
                         {exp.links.certificate && (
-                          <a href={exp.links.certificate} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-sm font-medium transition-colors hover:bg-white/10 hover:text-violet">
+                          <a href={exp.links.certificate} target="_blank" rel="noopener noreferrer" className="flex whitespace-nowrap items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-sm font-medium transition-colors hover:bg-white/10 hover:text-violet">
                             <Award className="h-4 w-4" /> View Certificate
                           </a>
                         )}
                         {exp.links.project && (
-                          <a href={exp.links.project} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-sm font-medium transition-colors hover:bg-white/10 hover:text-violet">
+                          <a href={exp.links.project} target="_blank" rel="noopener noreferrer" className="flex whitespace-nowrap items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-sm font-medium transition-colors hover:bg-white/10 hover:text-violet">
                             <ExternalLink className="h-4 w-4" /> View Project
                           </a>
                         )}
                         {exp.links.github && (
-                          <a href={exp.links.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-sm font-medium transition-colors hover:bg-white/10 hover:text-violet">
+                          <a href={exp.links.github} target="_blank" rel="noopener noreferrer" className="flex whitespace-nowrap items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-sm font-medium transition-colors hover:bg-white/10 hover:text-violet">
                             <Github className="h-4 w-4" /> GitHub
                           </a>
                         )}
