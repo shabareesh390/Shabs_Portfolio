@@ -6,6 +6,7 @@ import certWebDash from "@/assets/cert-webdash.png";
 import certInfosys from "@/assets/cert-infosys-c.png";
 import certInfosysAI from "@/assets/cert-infosys-ai.png";
 import certDeloitte from "@/assets/deloitte_cert.png";
+import certJPMorganChase from "@/assets/JPMorganChase_Cert.png";
 import certCampusCrew from "@/assets/CampusCrew_Cert.jpeg";
 
 type Certificate = {
@@ -25,6 +26,14 @@ const certificates: Certificate[] = [
     image: certDeloitte,
     tag: "Certification",
     accent: "linear-gradient(135deg, #f59e0b, #ef4444)",
+  },
+  {
+    title: "JPMorgan Chase Certificate",
+    issuer: "JPMorgan Chase",
+    date: "July 2026",
+    image: certJPMorganChase,
+    tag: "Certification",
+    accent: "linear-gradient(135deg, #0d4a8b, #2f80ed)",
   },
   {
     title: "WEB DASH 3.0 — Participation",
