@@ -7,6 +7,11 @@ const roles = [
     title: "Technology Analyst Virtual Intern",
     desc: "Internship • Deloitte • Remote\nCompleted Deloitte's Technology Analyst Virtual Internship on Forage, gaining hands-on experience in client data reconciliation and software development proposal writing.\n• Developed Python scripts to convert IIoT telemetry data from two different JSON formats into a unified output format, with all unit tests passing successfully.\n• Authored a formal software development proposal for a real-time manufacturing status dashboard for Daikibo Industrials, covering project scope, man-hour estimates, timeline, and post-delivery support.",
   },
+  {
+    Icon: Briefcase,
+    title: "Software Engineer Virtual Intern",
+    desc: "Remote virtual internship • Enterprise software engineering simulation focused on backend architecture and distributed systems.\n\n• Engineered a transaction processing backend utilizing Java and the Spring Boot framework.\n\n• Implemented real-time event streaming with Apache Kafka to consume and process transaction data.\n\n• Designed entity schemas and managed database persistence using Spring Data JPA and H2.\n\n• Integrated external microservices into the transaction pipeline via REST APIs using RestTemplate.\n\n• Developed and exposed custom RESTful endpoints to securely query and surface database records.",
+  },
   { Icon: Smartphone, title: "Flutter Development", desc: "Cross-platform mobile apps with Dart, Firebase & clean architecture." },
 ];
 
@@ -27,24 +32,6 @@ export function Experience() {
             Currently seeking <span className="text-gradient">internships</span>
           </h2>
           <p className="mt-3 text-muted-foreground">Available immediately for remote</p>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mx-auto mb-12 max-w-3xl space-y-4 text-center"
-        >
-          <p className="text-xl md:text-2xl leading-relaxed font-semibold">
-            <span className="text-gradient">Completed Deloitte's Technology Analyst Virtual Internship</span> on Forage, gaining hands-on experience in client data reconciliation and software development proposal writing.
-          </p>
-          <p className="text-xl md:text-2xl leading-relaxed font-semibold">
-            <span className="text-gradient">Independently designed and implemented</span> a full-stack cross-platform notes application using Flutter and Firebase with real-time synchronization through Cloud Firestore.
-          </p>
-          <p className="text-xl md:text-2xl leading-relaxed font-semibold">
-            <span className="text-gradient">Independently developed</span> multimodal AI-based answer analysis, automated mark allocation, and personalized feedback generation including strengths, weaknesses, and missing concepts.
-          </p>
         </motion.div>
 
         <motion.div
