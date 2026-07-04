@@ -4,6 +4,8 @@ import { Briefcase, Server, Smartphone, ExternalLink, Github, Award } from "luci
 import deloitteCert from "../../assets/deloitte_cert.png";
 import jpMorganCert from "../../assets/JPMorganChase_Cert.png";
 import walmartCert from "../../assets/walmart_Cert.png";
+import quantiumCert from "../../assets/Quantium_Cert.png";
+import skyScannerCert from "../../assets/SkyScanner_Cert.png";
 
 interface ExperienceLink {
   certificate?: string;
@@ -86,6 +88,45 @@ const experiences: Experience[] = [
     techStack: ["Java", "Spring Boot", "Apache Kafka", "REST API", "H2"],
     links: {
       certificate: jpMorganCert,
+    }
+  },
+  {
+    id: "quantium",
+    role: "Quantium Software Engineering Virtual Intern",
+    company: "Quantium",
+    logo: Briefcase,
+    date: "Completed",
+    location: "Remote",
+    type: "Internship",
+    status: "Completed",
+    bullets: [
+      "Completed a job simulation involving software engineering tasks at Quantium.",
+      "Built an interactive Dash application enabling the client to evaluate how price changes affected sales and profitability, including a region-filtered line chart visualisation.",
+      "Implemented a Selenium-based test suite to verify core application functionality, and a bash script to automate test execution — laying groundwork for CI integration.",
+      "Designed and styled an intuitive, visually engaging UI to improve usability for non-technical stakeholders."
+    ],
+    techStack: ["Python (Programming Language)", "Cascading Style Sheets (CSS)", "Dashboard Tools", "Data Analytics Libraries", "Data Management", "Python Testing", "Shell Scripting", "Test Automation", "Virtual Environment"],
+    links: {
+      certificate: quantiumCert,
+    }
+  },
+  {
+    id: "skyscanner",
+    role: "Frontend Developer Virtual Intern",
+    company: "Skyscanner",
+    logo: Briefcase,
+    date: "Completed",
+    location: "Remote",
+    type: "Internship",
+    status: "Completed",
+    bullets: [
+      "Completed a job simulation where I built a web application using React as a front-end engineer at Skyscanner.",
+      "Developed a page for picking a travel date using Skyscanner’s open-source Backpack React library.",
+      "Customised my application and ran automated tests to ensure it rendered properly."
+    ],
+    techStack: ["Front-End Design", "JavaScript", "Backpack", "React Development"],
+    links: {
+      certificate: skyScannerCert,
     }
   },
   {

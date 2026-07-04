@@ -9,6 +9,8 @@ import certDeloitte from "@/assets/deloitte_cert.png";
 import certJPMorganChase from "@/assets/JPMorganChase_Cert.png";
 import certCampusCrew from "@/assets/CampusCrew_Cert.jpeg";
 import certWalmart from "@/assets/walmart_Cert.png";
+import certQuantium from "@/assets/Quantium_Cert.png";
+import certSkyScanner from "@/assets/SkyScanner_Cert.png";
 
 type Certificate = {
   title: string;
@@ -43,6 +45,22 @@ const certificates: Certificate[] = [
     image: certWalmart,
     tag: "Certification",
     accent: "linear-gradient(135deg, #0ea5e9, #2563eb)",
+  },
+  {
+    title: "Quantium Software Engineering Virtual Intern",
+    issuer: "Quantium",
+    date: "July 2026",
+    image: certQuantium,
+    tag: "Certification",
+    accent: "linear-gradient(135deg, #f59e0b, #fbbf24)",
+  },
+  {
+    title: "Front-End Software Engineering Virtual Experience",
+    issuer: "Skyscanner",
+    date: "July 2026",
+    image: certSkyScanner,
+    tag: "Certification",
+    accent: "linear-gradient(135deg, #0284c7, #38bdf8)",
   },
   {
     title: "WEB DASH 3.0 — Participation",
