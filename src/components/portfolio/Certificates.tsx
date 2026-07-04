@@ -3,6 +3,8 @@ import { Award, ChevronLeft, ChevronRight, ExternalLink, X } from "lucide-react"
 import { useState } from "react";
 import { SectionHeader } from "./Section";
 import certWebDash from "@/assets/cert-webdash.png";
+import certJava from "@/assets/LetsUpgrade_Java_Bootcamp.png";
+import certSql from "@/assets/LetsUpgrade_SQL_bootcamp.png";
 import certInfosys from "@/assets/cert-infosys-c.png";
 import certInfosysAI from "@/assets/cert-infosys-ai.png";
 import certDeloitte from "@/assets/deloitte_cert.png";
@@ -63,12 +65,28 @@ const certificates: Certificate[] = [
     accent: "linear-gradient(135deg, #0284c7, #38bdf8)",
   },
   {
+    title: "Java Bootcamp",
+    issuer: "LetsUpgrade",
+    date: "2024",
+    image: certJava,
+    tag: "Bootcamp",
+    accent: "linear-gradient(135deg, #f97316, #fcd34d)",
+  },
+  {
     title: "WEB DASH 3.0 — Participation",
     issuer: "MITE · Dept. of CSE (IoT & Cyber Security with Blockchain)",
     date: "February 2026",
     image: certWebDash,
     tag: "Webdesigning",
     accent: "linear-gradient(135deg, #fde68a, #f0abfc)",
+  },
+  {
+    title: "SQL Bootcamp",
+    issuer: "LetsUpgrade",
+    date: "2024",
+    image: certSql,
+    tag: "Bootcamp",
+    accent: "linear-gradient(135deg, #3b82f6, #93c5fd)",
   },
   {
     title: "C Programming Course",
