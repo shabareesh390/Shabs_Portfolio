@@ -5,9 +5,9 @@ import avatar from "@/assets/avatar.jpg";
 
 const phrases = [
   "Building Mobile Apps & Solving Real-World Problems",
-  "Flutter Developer crafting fluid experiences",
-  "Java & C++ engineer with a love for algorithms",
-  "Exploring AI & Full Stack Development",
+  "Building AI-powered applications with Flutter Java and Firebase",
+  "Creating scalable software solutions through code innovation and dedication",
+  "Creating scalable software solutions",
 ];
 
 function useTyping() {
