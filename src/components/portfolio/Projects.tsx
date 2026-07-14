@@ -20,7 +20,7 @@ type Project = {
 
 const projects: Project[] = [
   {
-    title: "EvalAI",
+    title: "EvalAI-Smart Evaluation System ",
     tag: "Shipped",
     desc: "Developed a Flutter-based mobile application that automates the grading of handwritten student answer sheets using Google Gemini AI. The app analyzes answers, compares them with expected responses, assigns marks, and generates personalized feedback highlighting strengths, weaknesses, and missing concepts. Built with Firebase for secure authentication and report storage, it also includes performance analytics dashboards, PDF report generation, and customizable grading settings to streamline the evaluation process for educators.",
     tech: ["Flutter", "Dart", "Google Gemini AI", "Firebase", "Provider", "fl_chart", "Google ML Kit", "PDF Generation", "Analytics"],
@@ -40,7 +40,7 @@ const projects: Project[] = [
     logo: scamshieldLogo,
   },
   {
-    title: "Firebase Notes App",
+    title: "FireNotes App",
     tag: "Shipped",
     desc: "A full-stack mobile notes app built with Flutter and Firebase. Real-time note sync via Cloud Firestore, secure Email/Password and Google Sign-In, and a clean dark/light theme UI powered by Provider for state management.",
     tech: ["Flutter", "Dart", "Firebase Auth", "Cloud Firestore", "Provider", "Google Sign-In"],
@@ -81,10 +81,10 @@ function ProjectCard({ p, i }: { p: Project; i: number }) {
     >
       <div className="relative h-64 w-full overflow-hidden bg-gray-100 border-b border-gray-100 flex items-center justify-center">
         {p.logo ? (
-          <img 
-            src={p.logo} 
-            alt={p.title} 
-            className="w-full h-full object-contain p-6 transition-transform duration-500 group-hover:scale-105" 
+          <img
+            src={p.logo}
+            alt={p.title}
+            className="w-full h-full object-contain p-6 transition-transform duration-500 group-hover:scale-105"
           />
         ) : (
           <div className="w-full h-full flex items-center justify-center bg-gray-50 transition-transform duration-500 group-hover:scale-105">
