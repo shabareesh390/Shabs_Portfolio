@@ -4,6 +4,7 @@ import { SectionHeader } from "./Section";
 import firenotesLogo from "@/assets/firenotes.png";
 import evalaILogo from "@/assets/evalai.png";
 import scamshieldLogo from "@/assets/scam_shield.png";
+import pathpilotLogo from "@/assets/PathPilot.png";
 
 type Project = {
   title: string;
@@ -58,15 +59,7 @@ const projects: Project[] = [
     Icon: MapPin,
     accent: "bg-purple-500",
     upcoming: true,
-  },
-  {
-    title: "More Coming Soon",
-    tag: "Planned",
-    desc: "Exploring AI-powered Flutter experiences and a full-stack side project after PathPilot. Watch this space.",
-    tech: ["AI", "Full Stack", "Flutter"],
-    Icon: Sparkles,
-    accent: "bg-blue-500",
-    upcoming: true,
+    logo: pathpilotLogo,
   },
 ];
 
