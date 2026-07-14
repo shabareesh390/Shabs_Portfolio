@@ -172,19 +172,7 @@ export function Hero() {
               </div>
             </div>
 
-            {/* floating tech chips (minimal) */}
-            {[
-              { t: "Flutter", c: "top-8 -right-4" },
-              { t: "Java", c: "bottom-1/3 -right-6" },
-              { t: "DSA", c: "top-1/4 -left-4" },
-            ].map((chip, i) => (
-              <div
-                key={chip.t}
-                className={`absolute bg-white border border-gray-100 shadow-sm text-gray-700 rounded-full px-4 py-1.5 text-xs font-semibold ${chip.c}`}
-              >
-                {chip.t}
-              </div>
-            ))}
+
           </div>
         </motion.div>
       </div>
