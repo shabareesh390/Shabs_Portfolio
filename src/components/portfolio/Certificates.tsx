@@ -2,6 +2,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Award, ChevronLeft, ChevronRight, ExternalLink, X } from "lucide-react";
 import { useState } from "react";
 import { SectionHeader } from "./Section";
+import certGenAI from "@/assets/Gen_AI_Microsoft_LinkedIn.png";
 import certWebDash from "@/assets/cert-webdash.png";
 import certJava from "@/assets/LetsUpgrade_Java_Bootcamp.png";
 import certSql from "@/assets/LetsUpgrade_SQL_bootcamp.png";
@@ -25,6 +26,14 @@ type Certificate = {
 };
 
 const certificates: Certificate[] = [
+  {
+    title: "Career Essentials in Generative AI",
+    issuer: "Microsoft & LinkedIn",
+    date: "July 2026",
+    image: certGenAI,
+    tag: "Certification",
+    accent: "linear-gradient(135deg, #0284c7, #3b82f6)",
+  },
   {
     title: "Deloitte Certificate",
     issuer: "Deloitte",
