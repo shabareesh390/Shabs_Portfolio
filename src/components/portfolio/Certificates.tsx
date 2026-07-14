@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { Award, ExternalLink, X } from "lucide-react";
+import { Award, ChevronLeft, ChevronRight, ExternalLink, X } from "lucide-react";
 import { useState } from "react";
 import { SectionHeader } from "./Section";
 import certWebDash from "@/assets/cert-webdash.png";
@@ -20,6 +20,7 @@ type Certificate = {
   date: string;
   image: string;
   tag: string;
+  accent: string;
 };
 
 const certificates: Certificate[] = [
@@ -29,6 +30,7 @@ const certificates: Certificate[] = [
     date: "June 2026",
     image: certDeloitte,
     tag: "Certification",
+    accent: "linear-gradient(135deg, #f59e0b, #ef4444)",
   },
   {
     title: "JPMorgan Chase Certificate",
@@ -36,6 +38,7 @@ const certificates: Certificate[] = [
     date: "July 2026",
     image: certJPMorganChase,
     tag: "Certification",
+    accent: "linear-gradient(135deg, #0d4a8b, #2f80ed)",
   },
   {
     title: "Advanced Software Engineer Virtual Intern",
@@ -43,6 +46,7 @@ const certificates: Certificate[] = [
     date: "July 2026",
     image: certWalmart,
     tag: "Certification",
+    accent: "linear-gradient(135deg, #0ea5e9, #2563eb)",
   },
   {
     title: "Quantium Software Engineering Virtual Intern",
@@ -50,6 +54,7 @@ const certificates: Certificate[] = [
     date: "July 2026",
     image: certQuantium,
     tag: "Certification",
+    accent: "linear-gradient(135deg, #f59e0b, #fbbf24)",
   },
   {
     title: "Front-End Software Engineering Virtual Experience",
@@ -57,6 +62,7 @@ const certificates: Certificate[] = [
     date: "July 2026",
     image: certSkyScanner,
     tag: "Certification",
+    accent: "linear-gradient(135deg, #0284c7, #38bdf8)",
   },
   {
     title: "Java Bootcamp",
@@ -64,6 +70,7 @@ const certificates: Certificate[] = [
     date: "2024",
     image: certJava,
     tag: "Bootcamp",
+    accent: "linear-gradient(135deg, #f97316, #fcd34d)",
   },
   {
     title: "WEB DASH 3.0",
@@ -71,6 +78,7 @@ const certificates: Certificate[] = [
     date: "February 2026",
     image: certWebDash,
     tag: "Webdesigning",
+    accent: "linear-gradient(135deg, #fde68a, #f0abfc)",
   },
   {
     title: "SQL Bootcamp",
@@ -78,6 +86,7 @@ const certificates: Certificate[] = [
     date: "2024",
     image: certSql,
     tag: "Bootcamp",
+    accent: "linear-gradient(135deg, #3b82f6, #93c5fd)",
   },
   {
     title: "C Programming Course",
@@ -85,6 +94,7 @@ const certificates: Certificate[] = [
     date: "December 2025",
     image: certInfosys,
     tag: "Course",
+    accent: "linear-gradient(135deg, #a78bfa, #67e8f9)",
   },
   {
     title: "Introduction to Artificial Intelligence",
@@ -92,6 +102,7 @@ const certificates: Certificate[] = [
     date: "April 2026",
     image: certInfosysAI,
     tag: "Course",
+    accent: "linear-gradient(135deg, #67e8f9, #818cf8)",
   },
   {
     title: "CampusCrew Certificate",
@@ -99,11 +110,16 @@ const certificates: Certificate[] = [
     date: "July 2026",
     image: certCampusCrew,
     tag: "Certification",
+    accent: "linear-gradient(135deg, #22c55e, #3b82f6)",
   },
 ];
 
 export function Certificates() {
+  const [index, setIndex] = useState(0);
   const [lightbox, setLightbox] = useState<string | null>(null);
+  const total = certificates.length;
+  const go = (dir: number) => setIndex((i) => (i + dir + total) % total);
+  const current = certificates[index];
 
   return (
     <section id="certificates" className="relative py-32 bg-gray-50/50">
@@ -114,49 +130,103 @@ export function Certificates() {
           subtitle="A growing collection — every certificate marks a new skill earned."
         />
 
-        <div className="grid gap-6 md:grid-cols-2 mt-12">
-          {certificates.map((cert, index) => (
-            <motion.div
-              key={cert.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.05 }}
-              className="premium-card flex flex-row items-center gap-5 p-5 bg-white hover:border-gray-300"
-            >
-              <div className="h-16 w-24 md:h-20 md:w-28 shrink-0 overflow-hidden rounded-lg border border-gray-200 bg-gray-50">
-                <img
-                  src={cert.image}
-                  alt={cert.title}
-                  className="h-full w-full object-cover"
-                />
-              </div>
-              
-              <div className="flex flex-col flex-grow min-w-0">
-                <div className="flex items-center gap-2 mb-1">
-                  <Award className="h-3.5 w-3.5 text-blue-600" />
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-gray-500">
-                    {cert.tag}
-                  </span>
-                </div>
-                <h3 className="truncate font-sans font-bold text-gray-900 text-[15px]">
-                  {cert.title}
-                </h3>
-                <div className="mt-1 flex items-center justify-between gap-4">
-                  <p className="truncate text-xs font-medium text-gray-600">{cert.issuer}</p>
-                  <p className="shrink-0 text-xs text-gray-400">{cert.date}</p>
-                </div>
-                <div className="mt-3">
-                  <button
-                    onClick={() => setLightbox(cert.image)}
-                    className="inline-flex items-center text-[13px] font-semibold text-blue-600 hover:text-blue-700 transition-colors"
+        <div className="relative mx-auto max-w-5xl mt-12">
+          {/* Glow */}
+          <div
+            className="pointer-events-none absolute -inset-10 -z-10 rounded-[3rem] opacity-20 blur-3xl transition-all duration-700"
+            style={{ background: current.accent }}
+          />
+
+          <div className="premium-card relative overflow-hidden rounded-3xl p-5 md:p-8 bg-white">
+            <div className="grid gap-6 md:grid-cols-[1.4fr_1fr] md:gap-8">
+              {/* Image */}
+              <div className="relative">
+                <AnimatePresence mode="wait">
+                  <motion.button
+                    key={current.image}
+                    type="button"
+                    onClick={() => setLightbox(current.image)}
+                    initial={{ opacity: 0, x: 40, scale: 0.97 }}
+                    animate={{ opacity: 1, x: 0, scale: 1 }}
+                    exit={{ opacity: 0, x: -40, scale: 0.97 }}
+                    transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+                    className="group relative block w-full overflow-hidden rounded-2xl border border-gray-100 bg-gray-50"
                   >
-                    View Certificate <ExternalLink className="ml-1 h-3.5 w-3.5" />
-                  </button>
+                    <img
+                      src={current.image}
+                      alt={current.title}
+                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                    />
+                    <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
+                    <div className="absolute bottom-3 right-3 flex items-center gap-1.5 rounded-full bg-black/60 px-3 py-1.5 text-[11px] text-white opacity-0 backdrop-blur transition-opacity group-hover:opacity-100">
+                      <ExternalLink className="h-3 w-3" /> View full
+                    </div>
+                  </motion.button>
+                </AnimatePresence>
+              </div>
+
+              {/* Details */}
+              <div className="flex flex-col justify-between">
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={current.title}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    transition={{ duration: 0.4 }}
+                  >
+                    <span
+                      className="inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-white shadow-sm"
+                      style={{ background: current.accent }}
+                    >
+                      <Award className="h-3 w-3" /> {current.tag}
+                    </span>
+                    <h3 className="mt-4 font-sans text-2xl font-bold leading-tight text-gray-900 md:text-3xl">
+                      {current.title}
+                    </h3>
+                    <p className="mt-2 text-[15px] text-gray-600">{current.issuer}</p>
+                    <p className="mt-2 text-xs font-semibold uppercase tracking-widest text-gray-400">{current.date}</p>
+                  </motion.div>
+                </AnimatePresence>
+
+                <div className="mt-8 flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <button
+                      aria-label="Previous"
+                      onClick={() => go(-1)}
+                      className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 text-gray-600 transition hover:bg-gray-200 hover:text-blue-600"
+                    >
+                      <ChevronLeft className="h-4 w-4" />
+                    </button>
+                    <button
+                      aria-label="Next"
+                      onClick={() => go(1)}
+                      className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 text-gray-600 transition hover:bg-gray-200 hover:text-blue-600"
+                    >
+                      <ChevronRight className="h-4 w-4" />
+                    </button>
+                  </div>
+                  <div className="font-mono text-xs font-semibold text-gray-400">
+                    {String(index + 1).padStart(2, "0")} / {String(total).padStart(2, "0")}
+                  </div>
                 </div>
               </div>
-            </motion.div>
-          ))}
+            </div>
+          </div>
+
+          {/* Dots */}
+          <div className="mt-8 flex items-center justify-center gap-2">
+            {certificates.map((c, i) => (
+              <button
+                key={c.title}
+                aria-label={`Go to ${c.title}`}
+                onClick={() => setIndex(i)}
+                className={`h-2 rounded-full transition-all duration-500 ${
+                  i === index ? "w-8 bg-blue-600" : "w-2 bg-gray-300 hover:bg-gray-400"
+                }`}
+              />
+            ))}
+          </div>
         </div>
       </div>
 
