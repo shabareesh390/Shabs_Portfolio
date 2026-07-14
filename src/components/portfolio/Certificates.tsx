@@ -21,6 +21,7 @@ type Certificate = {
   image: string;
   tag: string;
   accent: string;
+  buttonPos?: "left" | "right";
 };
 
 const certificates: Certificate[] = [
@@ -47,6 +48,7 @@ const certificates: Certificate[] = [
     image: certWalmart,
     tag: "Certification",
     accent: "linear-gradient(135deg, #0ea5e9, #2563eb)",
+    buttonPos: "left",
   },
   {
     title: "Quantium Software Engineering Virtual Intern",
@@ -55,6 +57,7 @@ const certificates: Certificate[] = [
     image: certQuantium,
     tag: "Certification",
     accent: "linear-gradient(135deg, #f59e0b, #fbbf24)",
+    buttonPos: "left",
   },
   {
     title: "Front-End Software Engineering Virtual Experience",
@@ -158,7 +161,7 @@ export function Certificates() {
                       className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
                     />
                     <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
-                    <div className="absolute bottom-3 right-3 flex items-center gap-1.5 rounded-full bg-black/60 px-3 py-1.5 text-[11px] text-white opacity-0 backdrop-blur transition-opacity group-hover:opacity-100">
+                    <div className={`absolute bottom-3 ${current.buttonPos === 'left' ? 'left-3' : 'right-3'} flex items-center gap-1.5 rounded-full bg-black/60 px-3 py-1.5 text-[11px] text-white opacity-0 backdrop-blur transition-opacity group-hover:opacity-100`}>
                       <ExternalLink className="h-3 w-3" /> View full
                     </div>
                   </motion.button>

@@ -215,8 +215,8 @@ export function Experience() {
                     ))}
                   </ul>
 
-                  {/* Bottom (Tech Stack & Buttons) */}
-                  <div className="mt-2 flex flex-col gap-5 pt-2 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
+                  {/* Bottom (Tech Stack) */}
+                  <div className="mt-2 pt-2">
                     <div className="flex flex-wrap gap-2">
                       {exp.techStack.map(tech => (
                         <span key={tech} className="rounded-md bg-gray-50 border border-gray-200 px-2.5 py-1 text-[11px] font-medium text-gray-600">
@@ -224,27 +224,28 @@ export function Experience() {
                         </span>
                       ))}
                     </div>
-
-                    {exp.links && (
-                      <div className="flex shrink-0 flex-wrap items-center gap-3">
-                        {exp.links.certificate && (
-                          <a href={exp.links.certificate} target="_blank" rel="noopener noreferrer" className="flex whitespace-nowrap items-center gap-1.5 rounded-full border border-gray-200 bg-white px-4 py-1.5 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-50 hover:text-blue-600 shadow-sm">
-                            <Award className="h-4 w-4" /> View Certificate
-                          </a>
-                        )}
-                        {exp.links.project && (
-                          <a href={exp.links.project} target="_blank" rel="noopener noreferrer" className="flex whitespace-nowrap items-center gap-1.5 rounded-full border border-gray-200 bg-white px-4 py-1.5 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-50 hover:text-blue-600 shadow-sm">
-                            <ExternalLink className="h-4 w-4" /> View Project
-                          </a>
-                        )}
-                        {exp.links.github && (
-                          <a href={exp.links.github} target="_blank" rel="noopener noreferrer" className="flex whitespace-nowrap items-center gap-1.5 rounded-full border border-gray-200 bg-white px-4 py-1.5 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-50 hover:text-blue-600 shadow-sm">
-                            <Github className="h-4 w-4" /> GitHub
-                          </a>
-                        )}
-                      </div>
-                    )}
                   </div>
+
+                  {/* Links */}
+                  {exp.links && (
+                    <div className="mt-2 flex flex-wrap items-center gap-3">
+                      {exp.links.certificate && (
+                        <a href={exp.links.certificate} target="_blank" rel="noopener noreferrer" className="flex whitespace-nowrap items-center gap-1.5 rounded-full border border-gray-200 bg-white px-4 py-1.5 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-50 hover:text-blue-600 shadow-sm">
+                          <Award className="h-4 w-4" /> View Certificate
+                        </a>
+                      )}
+                      {exp.links.project && (
+                        <a href={exp.links.project} target="_blank" rel="noopener noreferrer" className="flex whitespace-nowrap items-center gap-1.5 rounded-full border border-gray-200 bg-white px-4 py-1.5 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-50 hover:text-blue-600 shadow-sm">
+                          <ExternalLink className="h-4 w-4" /> View Project
+                        </a>
+                      )}
+                      {exp.links.github && (
+                        <a href={exp.links.github} target="_blank" rel="noopener noreferrer" className="flex whitespace-nowrap items-center gap-1.5 rounded-full border border-gray-200 bg-white px-4 py-1.5 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-50 hover:text-blue-600 shadow-sm">
+                          <Github className="h-4 w-4" /> GitHub
+                        </a>
+                      )}
+                    </div>
+                  )}
                 </div>
               </motion.div>
             ))}
