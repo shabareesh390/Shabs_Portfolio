@@ -1,6 +1,5 @@
-import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { ArrowUpRight, Brain, Flame, Github, MapPin, Plus, Sparkles } from "lucide-react";
-import { useRef } from "react";
+import { motion } from "framer-motion";
+import { ArrowUpRight, Brain, Flame, Github, MapPin, Plus, Sparkles, Code2 } from "lucide-react";
 import { SectionHeader } from "./Section";
 import firenotesLogo from "@/assets/firenotes.png";
 import evalaILogo from "@/assets/evalai.png";
@@ -27,7 +26,7 @@ const projects: Project[] = [
     Icon: Flame,
     href: "https://github.com/shabareesh390/FireNotes.git",
     repo: "https://github.com/shabareesh390/FireNotes.git",
-    accent: "linear-gradient(135deg, #fbbf24, #f97316)",
+    accent: "bg-orange-500",
     logo: firenotesLogo,
   },
   {
@@ -37,7 +36,7 @@ const projects: Project[] = [
     tech: ["Flutter", "Dart", "Google Gemini AI", "Firebase", "Provider", "fl_chart", "Google ML Kit", "PDF Generation", "Analytics"],
     Icon: Brain,
     repo: "https://github.com/shabareesh390/EvalAI",
-    accent: "linear-gradient(135deg, #6366f1, #8b5cf6)",
+    accent: "bg-indigo-500",
     logo: evalaILogo,
   },
   {
@@ -46,7 +45,7 @@ const projects: Project[] = [
     desc: "Currently building PathPilot — a smart campus navigation companion in Flutter for MITE. It will help students, faculty, and visitors locate classrooms, departments, and facilities through an interactive map and smart search. Work in progress.",
     tech: ["Flutter", "Dart", "Material 3"],
     Icon: MapPin,
-    accent: "linear-gradient(135deg, #f0abfc, #a78bfa)",
+    accent: "bg-purple-500",
     upcoming: true,
   },
   {
@@ -55,93 +54,71 @@ const projects: Project[] = [
     desc: "Exploring AI-powered Flutter experiences and a full-stack side project after PathPilot. Watch this space.",
     tech: ["AI", "Full Stack", "Flutter"],
     Icon: Sparkles,
-    accent: "linear-gradient(135deg, #fde68a, #f0abfc)",
+    accent: "bg-blue-500",
     upcoming: true,
   },
 ];
 
 function ProjectCard({ p, i }: { p: Project; i: number }) {
-  const ref = useRef<HTMLDivElement>(null);
-  const mx = useMotionValue(0);
-  const my = useMotionValue(0);
-  const rx = useSpring(useTransform(my, [-0.5, 0.5], [8, -8]), { stiffness: 200, damping: 20 });
-  const ry = useSpring(useTransform(mx, [-0.5, 0.5], [-8, 8]), { stiffness: 200, damping: 20 });
-
-  const onMove = (e: React.MouseEvent) => {
-    const r = ref.current!.getBoundingClientRect();
-    mx.set((e.clientX - r.left) / r.width - 0.5);
-    my.set((e.clientY - r.top) / r.height - 0.5);
-  };
-  const onLeave = () => { mx.set(0); my.set(0); };
-
   return (
     <motion.div
-      initial={{ opacity: 0, y: 40 }}
+      initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6, delay: i * 0.1 }}
-      ref={ref}
-      onMouseMove={onMove}
-      onMouseLeave={onLeave}
-      style={{ rotateX: rx, rotateY: ry, transformStyle: "preserve-3d" }}
-      className="glass-strong group relative overflow-hidden rounded-3xl p-7"
+      className="premium-card flex flex-col group overflow-hidden bg-white"
     >
-      <div
-        className="pointer-events-none absolute -top-32 right-0 h-64 w-64 rounded-full opacity-30 blur-3xl transition-opacity duration-500 group-hover:opacity-70"
-        style={{ background: p.accent }}
-      />
-      <div className="relative flex items-start justify-between">
+      <div className="relative h-64 w-full overflow-hidden bg-gray-100 border-b border-gray-100 flex items-center justify-center">
         {p.logo ? (
-          <img src={p.logo} alt={p.title} className="h-14 w-14 rounded-2xl object-cover" />
+          <img 
+            src={p.logo} 
+            alt={p.title} 
+            className="w-full h-full object-contain p-6 transition-transform duration-500 group-hover:scale-105" 
+          />
         ) : (
-          <div
-            className="flex h-14 w-14 items-center justify-center rounded-2xl"
-            style={{ background: p.accent }}
-          >
-            <p.Icon className="h-7 w-7 text-background" />
+          <div className="w-full h-full flex items-center justify-center bg-gray-50 transition-transform duration-500 group-hover:scale-105">
+            <p.Icon className="h-16 w-16 text-gray-300" />
           </div>
         )}
-        <span className="glass rounded-full px-3 py-1 text-[10px] uppercase tracking-widest text-muted-foreground">
-          {p.tag}
-        </span>
-      </div>
-
-      <h3 className="relative mt-6 font-display text-2xl font-bold">{p.title}</h3>
-      <p className="relative mt-3 text-sm leading-relaxed text-muted-foreground">{p.desc}</p>
-
-      <div className="relative mt-5 flex flex-wrap gap-1.5">
-        {p.tech.map((t) => (
-          <span key={t} className="rounded-full border border-border bg-white/[0.03] px-2.5 py-1 text-[11px]">
-            {t}
+        <div className="absolute top-4 right-4">
+          <span className="inline-flex items-center rounded-full bg-white/90 backdrop-blur-sm px-3 py-1 text-xs font-semibold text-gray-700 shadow-sm">
+            {p.tag}
           </span>
-        ))}
+        </div>
       </div>
 
-      <div className="relative mt-6 flex items-center justify-between">
-        <span className="text-xs text-muted-foreground">
-          {p.upcoming ? "Drafting" : "Case study soon"}
-        </span>
-        <div className="flex items-center gap-3">
+      <div className="flex flex-col flex-grow p-6 md:p-8">
+        <h3 className="font-sans text-2xl font-bold text-gray-900">{p.title}</h3>
+        <p className="mt-3 text-sm leading-relaxed text-gray-600 flex-grow">
+          {p.desc}
+        </p>
+
+        <div className="mt-6 flex flex-wrap gap-2">
+          {p.tech.map((t) => (
+            <span key={t} className="rounded-md border border-gray-200 bg-gray-50 px-2.5 py-1 text-[11px] font-medium text-gray-600">
+              {t}
+            </span>
+          ))}
+        </div>
+
+        <div className="mt-8 flex items-center gap-3">
           {p.repo && (
             <a
               href={p.repo}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1.5 rounded-full bg-white/5 px-3 py-1.5 text-xs transition-all hover:bg-white/15"
+              className="secondary-btn w-full justify-center"
             >
-              <Github className="h-3.5 w-3.5" />
-              Git Repo
+              <Github className="h-4 w-4 mr-2" />
+              GitHub
             </a>
           )}
-          <a
-            href={p.href ?? "#"}
-            target={p.href ? "_blank" : undefined}
-            rel={p.href ? "noopener noreferrer" : undefined}
-            aria-label="View project"
-            className="flex h-10 w-10 items-center justify-center rounded-full bg-white/5 transition-all group-hover:bg-white/15"
-          >
-            {p.upcoming ? <Plus className="h-4 w-4" /> : <ArrowUpRight className="h-4 w-4" />}
-          </a>
+          {p.upcoming && (
+            <div className="primary-btn w-full justify-center opacity-80 cursor-default pointer-events-none hover:translate-y-0 hover:shadow-none">
+              <Code2 className="h-4 w-4 mr-2" />
+              In Progress
+            </div>
+          )}
         </div>
       </div>
     </motion.div>
@@ -150,14 +127,14 @@ function ProjectCard({ p, i }: { p: Project; i: number }) {
 
 export function Projects() {
   return (
-    <section id="projects" className="relative py-28">
-      <div className="container mx-auto px-6">
+    <section id="projects" className="relative py-32 bg-gray-50/50">
+      <div className="max-w-[1200px] mx-auto px-6">
         <SectionHeader
           eyebrow="Featured Work"
-          title={<>Projects that <span className="text-gradient">solve real problems</span></>}
+          title={<>Projects that <span className="text-blue-600">solve real problems</span></>}
           subtitle="A focused selection — each one taught me how to ship better software."
         />
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-2">
           {projects.map((p, i) => <ProjectCard key={p.title} p={p} i={i} />)}
         </div>
       </div>

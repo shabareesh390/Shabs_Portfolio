@@ -1,8 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Loader } from "@/components/portfolio/Loader";
-import { CustomCursor } from "@/components/portfolio/CustomCursor";
 import { ScrollProgress } from "@/components/portfolio/ScrollProgress";
-import { Particles } from "@/components/portfolio/Particles";
 import { Navbar } from "@/components/portfolio/Navbar";
 import { Hero } from "@/components/portfolio/Hero";
 import { About } from "@/components/portfolio/About";
@@ -46,9 +44,7 @@ function Index() {
   return (
     <main className="relative">
       <Loader />
-      <CustomCursor />
       <ScrollProgress />
-      <Particles />
       <Navbar />
       <Hero />
       <About />

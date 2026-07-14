@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { SectionHeader } from "./Section";
 import {
@@ -19,8 +18,8 @@ const skills = [
   { Icon: SiFirebase, name: "Firebase", level: 70, color: "#FFCA28" },
   { Icon: SiSupabase, name: "Supabase", level: 70, color: "#3ECF8E" },
   { Icon: SiGit, name: "Git", level: 78, color: "#F05032" },
-  { Icon: SiGithub, name: "GitHub", level: 80, color: "#ffffff" },
-  { Icon: Lightbulb, name: "Problem Solving", level: 85, color: "#67e8f9" },
+  { Icon: SiGithub, name: "GitHub", level: 80, color: "#111827" },
+  { Icon: Lightbulb, name: "Problem Solving", level: 85, color: "#0ea5e9" },
   { Icon: Globe, name: "REST API", level: 75, color: "#3b82f6" },
   { Icon: Package, name: "Provider", level: 78, color: "#10b981" },
   { Icon: Zap, name: "Google ML Kit", level: 76, color: "#f59e0b" },
@@ -37,55 +36,55 @@ const skills = [
 
 export function Skills() {
   return (
-    <section id="skills" className="relative py-28">
-      <div className="container mx-auto px-6">
+    <section id="skills" className="relative py-32 bg-white">
+      <div className="max-w-[1200px] mx-auto px-6">
         <SectionHeader
           eyebrow="Skills"
-          title={<>My <span className="text-gradient">technical</span> toolkit</>}
+          title={<>My <span className="text-blue-600">technical</span> toolkit</>}
           subtitle="Languages and tools I actively use, with mastery improving every week."
         />
 
-        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-5">
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
           {skills.map((s, i) => (
             <motion.div
               key={s.name}
-              initial={{ opacity: 0, y: 24 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.45, delay: i * 0.05 }}
-              whileHover={{ y: -8, rotateX: 6, rotateY: -6 }}
-              style={{ transformStyle: "preserve-3d" }}
-              className="glass group relative overflow-hidden rounded-2xl p-5 text-center"
+              transition={{ duration: 0.4, delay: (i % 6) * 0.05 }}
+              className="premium-card group relative overflow-hidden p-5 text-center bg-white hover:border-gray-300"
             >
-              <div
-                className="absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
-                style={{
-                  background: `radial-gradient(circle at 50% 0%, ${s.color}33, transparent 70%)`,
-                }}
-              />
-              <s.Icon
-                className="relative mx-auto h-10 w-10 transition-transform duration-300 group-hover:scale-110"
-                style={{ color: s.color }}
-              />
-              <div className="relative mt-3 text-sm font-semibold">{s.name}</div>
-              <div className="relative mt-2 h-1.5 w-full overflow-hidden rounded-full bg-white/10">
-                <motion.div
-                  initial={{ width: 0 }}
-                  whileInView={{ width: `${s.level}%` }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 1, delay: i * 0.05 }}
-                  className="h-full rounded-full"
-                  style={{ background: `linear-gradient(90deg, ${s.color}, var(--violet))` }}
+              <div className="flex flex-col items-center">
+                <s.Icon
+                  className="h-8 w-8 transition-transform duration-300 group-hover:scale-110"
+                  style={{ color: s.color }}
                 />
+                <div className="mt-4 font-semibold text-gray-900 text-sm tracking-tight">{s.name}</div>
+                
+                <div className="w-full mt-3 flex items-center justify-between text-xs text-gray-500 mb-1.5 font-medium">
+                  <span>Level</span>
+                  <span>{s.level}%</span>
+                </div>
+                <div className="relative h-1 w-full overflow-hidden rounded-full bg-gray-100">
+                  <motion.div
+                    initial={{ width: 0 }}
+                    whileInView={{ width: `${s.level}%` }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                    className="h-full rounded-full"
+                    style={{ backgroundColor: s.color }}
+                  />
+                </div>
               </div>
-              <div className="relative mt-1 text-[10px] text-muted-foreground">{s.level}%</div>
             </motion.div>
           ))}
         </div>
 
-        <div className="mt-8 flex flex-wrap justify-center gap-2">
+        <div className="mt-12 flex flex-wrap justify-center gap-3">
           {["C Programming Certified", "Hackathon-ready", "Open Source curious", "Agile mindset"].map((b) => (
-            <span key={b} className="glass rounded-full px-4 py-1.5 text-xs text-muted-foreground">{b}</span>
+            <span key={b} className="rounded-full border border-gray-200 bg-gray-50 px-5 py-2 text-xs font-medium text-gray-600">
+              {b}
+            </span>
           ))}
         </div>
       </div>

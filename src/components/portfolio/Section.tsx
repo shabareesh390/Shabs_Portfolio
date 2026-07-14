@@ -5,17 +5,17 @@ export function SectionHeader({ eyebrow, title, subtitle }: { eyebrow: string; t
   return (
     <motion.div
       layout
-      initial={{ opacity: 0, y: 30 }}
+      initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-80px" }}
-      transition={{ duration: 0.7 }}
-      className="mx-auto mb-14 max-w-2xl text-center"
+      transition={{ duration: 0.6 }}
+      className="mx-auto mb-16 max-w-2xl text-center"
     >
-      <div className="glass mx-auto inline-flex items-center gap-2 rounded-full px-3 py-1 text-[11px] uppercase tracking-[0.2em] text-muted-foreground">
+      <div className="mx-auto inline-flex items-center gap-2 rounded-full border border-gray-200 bg-gray-50 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.2em] text-gray-600 shadow-sm">
         {eyebrow}
       </div>
-      <h2 className="mt-4 font-display text-4xl font-bold md:text-5xl">{title}</h2>
-      {subtitle && <p className="mt-3 text-muted-foreground">{subtitle}</p>}
+      <h2 className="mt-6 font-sans text-3xl font-bold md:text-[40px] text-gray-900 tracking-tight leading-tight">{title}</h2>
+      {subtitle && <p className="mt-4 text-base text-gray-600">{subtitle}</p>}
     </motion.div>
   );
 }

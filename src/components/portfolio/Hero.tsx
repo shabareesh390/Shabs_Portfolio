@@ -1,13 +1,13 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { ArrowDown, Download, Github, Linkedin, Mail, Sparkles } from "lucide-react";
+import { ArrowDown, Download, Github, Linkedin, Mail, Sparkles, FolderDot } from "lucide-react";
 import avatar from "@/assets/avatar.jpg";
 
 const phrases = [
-  "Building Mobile Apps & Solving Real-World Problems",
-  "Building AI-powered applications with Flutter Java and Firebase",
-  "Creating scalable software solutions through code innovation and dedication",
-  "Creating scalable software solutions",
+  "Full stack developer",
+  "Solving real world problems by Web App solutions",
+  "MERN Stack Developer",
+  "Java Developer",
 ];
 
 function useTyping() {
@@ -37,94 +37,77 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative flex min-h-[100svh] items-center overflow-hidden bg-grid"
+      className="relative flex min-h-[100svh] items-center bg-white overflow-hidden bg-grid"
     >
-      {/* Glow blobs */}
-      <div className="pointer-events-none absolute inset-0">
-        <div
-          className="absolute -left-32 top-20 h-[500px] w-[500px] rounded-full opacity-40 blur-3xl animate-blob"
-          style={{ background: "radial-gradient(circle, var(--violet), transparent 60%)" }}
-        />
-        <div
-          className="absolute -right-32 bottom-0 h-[500px] w-[500px] rounded-full opacity-40 blur-3xl animate-blob"
-          style={{
-            background: "radial-gradient(circle, var(--cyan), transparent 60%)",
-            animationDelay: "-6s",
-          }}
-        />
-      </div>
-
-      <div
-        className="pointer-events-none absolute inset-0"
-        style={{ background: "var(--gradient-glow)" }}
-      />
-
-      <div className="container relative z-10 mx-auto grid items-center gap-12 px-6 pt-32 md:grid-cols-[1.4fr_1fr] md:pt-24">
+      <div className="max-w-[1200px] relative z-10 mx-auto grid items-center gap-12 px-6 pt-32 md:grid-cols-[1.2fr_1fr] md:pt-24 w-full">
         <div>
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.5, duration: 0.6 }}
-            className="glass inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs"
+            transition={{ duration: 0.6 }}
+            className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-gray-50 px-4 py-1.5 text-xs font-medium text-gray-600 mb-6 shadow-sm"
           >
             <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500 opacity-75" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500" />
             </span>
-            <span className="text-muted-foreground">
-              Open for Internship Opportunities · 2026
-            </span>
+            <span>Open for Internship Opportunities · 2026</span>
           </motion.div>
 
           <motion.h1
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.6, duration: 0.8 }}
-            className="mt-6 font-display text-5xl font-bold leading-[1.05] md:text-7xl"
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="font-sans text-5xl font-bold leading-[1.1] md:text-7xl text-gray-900 tracking-tight"
           >
-            Hi, I'm <span className="text-gradient animate-gradient">Shabareesh</span>
-            <br />
-            <span className="grid align-top">
-              {/* Ghost reserves the tallest phrase height at every viewport */}
-              <span className="invisible col-start-1 row-start-1" aria-hidden>
+            Hi, I'm <span className="text-blue-600">Shabareesh</span>
+          </motion.h1>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.15 }}
+            className="mt-4 text-2xl md:text-4xl font-semibold text-gray-700 min-h-[3em] md:min-h-[1.5em] flex items-start"
+          >
+            <span className="grid align-top w-full">
+              <span className="invisible col-start-1 row-start-1 w-full" aria-hidden>
                 {phrases.reduce((a, b) => (a.length >= b.length ? a : b))}
               </span>
-              <span className="col-start-1 row-start-1">
-                <span className="text-foreground/90">{typed}</span>
-                <span className="ml-1 inline-block h-[0.9em] w-[3px] translate-y-1 animate-pulse bg-gradient-to-b from-cyan to-violet" />
+              <span className="col-start-1 row-start-1 w-full text-blue-600">
+                {typed}
+                <span className="ml-1 inline-block h-[0.8em] w-[4px] bg-blue-600 animate-pulse -translate-y-[0.05em]" />
               </span>
             </span>
-          </motion.h1>
+          </motion.div>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.8, duration: 0.6 }}
-            className="mt-6 max-w-xl text-base text-muted-foreground md:text-lg"
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="mt-6 max-w-xl text-base text-gray-600 md:text-lg leading-relaxed"
           >
-            Computer Science Engineering student at MITE. Flutter & Java developer
-            sharpening DSA daily, shipping real-world apps, and exploring AI &
-            Full-Stack development.
+            Computer Science Engineering student at MITE. Building mobile apps, solving complex problems, and exploring scalable software architectures. Always focused on clean code and robust solutions.
           </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 2.0, duration: 0.6 }}
-            className="mt-8 flex flex-wrap items-center gap-3"
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="mt-8 flex flex-wrap items-center gap-4"
           >
-            <a href="#contact" className="magnetic-btn magnetic-btn-hover inline-flex items-center gap-2">
-              <Sparkles className="h-4 w-4" /> Hire Me
+            <a href="#projects" className="primary-btn">
+              <FolderDot className="h-4 w-4 mr-2" /> View Projects
             </a>
             <a
               href="/Shabareesh_S_Gowda_Resume.pdf"
               download="Shabareesh_S_Gowda_Resume.pdf"
               target="_blank"
-              className="glass-strong inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-medium transition-all hover:bg-white/10"
+              className="secondary-btn"
             >
-              <Download className="h-4 w-4" /> Download Resume
+              <Download className="h-4 w-4 mr-2" /> Download Resume
             </a>
-            <div className="ml-1 flex items-center gap-2">
+
+            <div className="flex items-center gap-2 ml-2">
               {[
                 { Icon: Github, href: "https://github.com/shabareesh390", label: "GitHub" },
                 { Icon: Linkedin, href: "https://www.linkedin.com/in/shabareesh-s-gowda-a78490381", label: "LinkedIn" },
@@ -136,7 +119,7 @@ export function Hero() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="glass flex h-10 w-10 items-center justify-center rounded-full transition-all hover:scale-110 hover:bg-white/10 hover:text-cyan"
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-gray-200 text-gray-600 transition-all hover:border-gray-300 hover:bg-gray-50 hover:text-blue-600"
                 >
                   <Icon className="h-4 w-4" />
                 </a>
@@ -145,19 +128,19 @@ export function Hero() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 2.4, duration: 0.8 }}
-            className="mt-12 grid max-w-md grid-cols-3 gap-4"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="mt-12 grid max-w-md grid-cols-3 gap-6"
           >
             {[
               { v: "9+", l: "Core Tech" },
-              { v: "2", l: "projects shipped" },
+              { v: "2", l: "Shipped" },
               { v: "2nd Yr", l: "B.E. CSE" },
             ].map((s) => (
-              <div key={s.l} className="glass rounded-xl p-3 text-center">
-                <div className="text-2xl font-bold text-gradient">{s.v}</div>
-                <div className="text-[11px] uppercase tracking-wider text-muted-foreground">{s.l}</div>
+              <div key={s.l} className="flex flex-col">
+                <div className="text-3xl font-bold text-gray-900 tracking-tight">{s.v}</div>
+                <div className="text-[13px] font-medium text-gray-500 mt-1">{s.l}</div>
               </div>
             ))}
           </motion.div>
@@ -165,44 +148,42 @@ export function Hero() {
 
         {/* Avatar */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 1.7, duration: 0.8 }}
-          className="relative mx-auto w-full max-w-sm"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="relative mx-auto w-full max-w-sm hidden md:block"
         >
-          <div className="relative aspect-square animate-float">
-            <div
-              className="absolute inset-0 rounded-[2rem] blur-2xl opacity-60"
-              style={{ background: "var(--gradient-primary)" }}
+          <div className="relative aspect-[4/5] w-full bg-white rounded-3xl p-3 shadow-[0_8px_30px_rgb(0,0,0,0.08)] border border-gray-100">
+            <img
+              src={avatar}
+              alt="Shabareesh S Gowda"
+              className="h-full w-full rounded-2xl object-cover"
             />
-            <div className="relative h-full w-full overflow-hidden rounded-[2rem] glass-strong p-2">
-              <img
-                src={avatar}
-                alt="Shabareesh S Gowda"
-                className="h-full w-full rounded-[1.7rem] object-cover"
-              />
-              <div className="absolute bottom-4 left-4 right-4 glass-strong rounded-2xl px-4 py-3">
-                <div className="text-xs text-muted-foreground">Currently</div>
-                <div className="text-sm font-semibold">Advancing Flutter Development</div>
+
+            <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl p-4 shadow-[0_8px_30px_rgb(0,0,0,0.08)] border border-gray-100 max-w-[200px]">
+              <div className="flex items-center gap-3">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-50 text-blue-600">
+                  <Sparkles className="h-5 w-5" />
+                </div>
+                <div>
+                  <div className="text-[11px] font-medium text-gray-500 uppercase tracking-wider">Focus</div>
+                  <div className="text-sm font-semibold text-gray-900 leading-tight">Software Engineering</div>
+                </div>
               </div>
             </div>
-            {/* floating tech chips */}
+
+            {/* floating tech chips (minimal) */}
             {[
-              { t: "Flutter", c: "top-2 -left-6" },
-              { t: "Java", c: "top-1/3 -right-8" },
-              { t: "DSA", c: "bottom-24 -left-10" },
-              { t: "Firebase", c: "-bottom-4 right-4" },
+              { t: "Flutter", c: "top-8 -right-4" },
+              { t: "Java", c: "bottom-1/3 -right-6" },
+              { t: "DSA", c: "top-1/4 -left-4" },
             ].map((chip, i) => (
-              <motion.div
+              <div
                 key={chip.t}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 2 + i * 0.15 }}
-                className={`absolute glass-strong rounded-full px-3 py-1 text-xs font-medium ${chip.c} animate-float`}
-                style={{ animationDelay: `${i * 0.5}s` }}
+                className={`absolute bg-white border border-gray-100 shadow-sm text-gray-700 rounded-full px-4 py-1.5 text-xs font-semibold ${chip.c}`}
               >
                 {chip.t}
-              </motion.div>
+              </div>
             ))}
           </div>
         </motion.div>
@@ -212,8 +193,8 @@ export function Hero() {
         href="#about"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 2.6 }}
-        className="absolute bottom-6 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 text-xs text-muted-foreground md:flex"
+        transition={{ delay: 0.8 }}
+        className="absolute bottom-8 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 text-xs font-medium text-gray-400 md:flex hover:text-gray-600 transition-colors"
       >
         Scroll <ArrowDown className="h-4 w-4 animate-bounce" />
       </motion.a>

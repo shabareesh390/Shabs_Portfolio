@@ -17,38 +17,37 @@ export function Navbar() {
     <motion.header
       initial={{ y: -40, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.6, delay: 1.4 }}
-      className="fixed left-1/2 top-4 z-50 w-[min(96%,1100px)] -translate-x-1/2"
+      transition={{ duration: 0.6 }}
+      className={`fixed top-0 left-0 right-0 z-50 w-full bg-white transition-all duration-300 ${
+        scrolled ? "shadow-[0_2px_10px_rgba(0,0,0,0.05)] border-b border-gray-100" : ""
+      }`}
     >
-      <nav
-        className={`flex items-center justify-between rounded-full px-5 py-3 transition-all duration-300 ${
-          scrolled ? "glass-strong shadow-elegant" : "glass"
-        }`}
-      >
-        <a href="#home" className="font-display text-lg font-bold tracking-tight">
-          <span className="text-gradient">Shabareesh S Gowda</span>
+      <nav className="max-w-[1200px] mx-auto px-6 py-4 flex items-center justify-between">
+        <a href="#home" className="text-lg font-bold tracking-tight text-gray-900">
+          Shabareesh S Gowda
         </a>
-        <ul className="hidden items-center gap-1 md:flex">
+        <ul className="hidden md:flex items-center gap-8">
           {links.map((l) => (
             <li key={l.href}>
               <a
                 href={l.href}
-                className="rounded-full px-4 py-2 text-sm text-muted-foreground transition-colors hover:bg-white/5 hover:text-foreground"
+                className="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors relative group"
               >
                 {l.label}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
               </a>
             </li>
           ))}
         </ul>
         <a
           href="#contact"
-          className="magnetic-btn magnetic-btn-hover hidden text-sm md:inline-block"
+          className="hidden md:inline-flex primary-btn py-2 px-5 text-sm"
         >
           Let's Talk
         </a>
         <a
           href="#contact"
-          className="magnetic-btn magnetic-btn-hover text-xs md:hidden"
+          className="md:hidden primary-btn py-1.5 px-4 text-xs"
         >
           Hire
         </a>

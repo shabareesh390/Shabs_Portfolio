@@ -6,6 +6,7 @@ import jpMorganCert from "../../assets/JPMorganChase_Cert.png";
 import walmartCert from "../../assets/walmart_Cert.png";
 import quantiumCert from "../../assets/Quantium_Cert.png";
 import skyScannerCert from "../../assets/SkyScanner_Cert.png";
+import { SectionHeader } from "./Section";
 
 interface ExperienceLink {
   certificate?: string;
@@ -105,7 +106,7 @@ const experiences: Experience[] = [
       "Implemented a Selenium-based test suite to verify core application functionality, and a bash script to automate test execution — laying groundwork for CI integration.",
       "Designed and styled an intuitive, visually engaging UI to improve usability for non-technical stakeholders."
     ],
-    techStack: ["Python (Programming Language)", "Cascading Style Sheets (CSS)", "Dashboard Tools", "Data Analytics Libraries", "Data Management", "Python Testing", "Shell Scripting", "Test Automation", "Virtual Environment"],
+    techStack: ["Python", "CSS", "Dashboard Tools", "Data Analytics Libraries", "Data Management", "Python Testing", "Shell Scripting", "Test Automation"],
     links: {
       certificate: quantiumCert,
     }
@@ -154,86 +155,71 @@ const experiences: Experience[] = [
 
 export function Experience() {
   return (
-    <section id="experience" className="relative py-28 md:py-36">
-      <div className="container mx-auto px-6">
-        <motion.div
-          layout
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.7 }}
-          className="mx-auto mb-20 max-w-3xl text-center"
-        >
-          <h2 className="font-display text-4xl font-bold md:text-5xl">
-            Experience
-          </h2>
-          <p className="mt-6 text-base text-muted-foreground md:text-lg">
-            Professional experience, internships, certifications, and impactful contributions.
-          </p>
-        </motion.div>
+    <section id="experience" className="relative py-32 bg-white">
+      <div className="max-w-[1200px] mx-auto px-6">
+        <SectionHeader
+          eyebrow="Timeline"
+          title={<>My <span className="text-blue-600">Experience</span></>}
+          subtitle="Professional experience, internships, certifications, and impactful contributions."
+        />
 
-        <div className="relative mx-auto max-w-3xl">
+        <div className="relative mx-auto max-w-4xl mt-12">
           {/* Vertical Line */}
-          <div className="absolute left-[19px] top-6 bottom-0 w-[2px] bg-white/10" />
+          <div className="absolute left-[20px] top-4 bottom-0 w-[2px] bg-gray-200" />
 
-          <div className="space-y-12 md:space-y-16">
+          <div className="space-y-12">
             {experiences.map((exp, index) => (
               <motion.div
                 key={exp.id}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="relative pl-14 md:pl-20"
               >
-                {/* Timeline Dot with Pulse Animation */}
+                {/* Timeline Dot */}
                 <div className="absolute left-[15px] top-8 flex items-center justify-center">
-                  <motion.div
-                    animate={{ scale: [1, 1.2, 1], opacity: [0.5, 1, 0.5] }}
-                    transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                    className="absolute h-4 w-4 rounded-full bg-violet/30"
-                  />
-                  <div className="relative h-2.5 w-2.5 rounded-full bg-violet" style={{ boxShadow: '0 0 10px var(--color-violet)' }} />
+                  <div className="relative h-3 w-3 rounded-full bg-blue-600 shadow-[0_0_0_4px_rgba(37,99,235,0.1)]" />
                 </div>
 
                 {/* Card */}
-                <div className="glass group relative flex flex-col gap-5 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:bg-white/[0.04] md:p-8 shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
+                <div className="premium-card group relative flex flex-col gap-5 p-6 md:p-8 bg-white hover:border-gray-300">
                   {/* Top Row */}
-                  <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+                  <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between border-b border-gray-100 pb-5">
                     <div className="flex items-start gap-4">
-                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-violet transition-transform duration-300 group-hover:scale-110">
+                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gray-50 text-blue-600 transition-transform duration-300 group-hover:bg-blue-50">
                         <exp.logo className="h-6 w-6" />
                       </div>
                       <div className="flex flex-col">
-                        <h3 className="text-xl font-bold text-foreground">{exp.role}</h3>
-                        <div className="text-base font-medium text-foreground/80">{exp.company}</div>
+                        <h3 className="text-xl font-bold text-gray-900 leading-tight">{exp.role}</h3>
+                        <div className="text-base font-medium text-blue-600 mt-1">{exp.company}</div>
                       </div>
                     </div>
-                    <div className="flex flex-row items-center gap-3 sm:flex-col sm:items-end sm:gap-1.5">
-                      <span className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold ${exp.status === 'Completed' ? 'bg-green-500/10 text-green-400' : 'bg-violet/10 text-violet'}`}>
+                    <div className="flex flex-row items-center gap-3 sm:flex-col sm:items-end sm:gap-1.5 shrink-0">
+                      <span className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold ${exp.status === 'Completed' ? 'bg-green-100 text-green-700' : 'bg-blue-100 text-blue-700'}`}>
                         {exp.status}
                       </span>
-                      <span className="text-sm text-muted-foreground">
-                        {exp.date} • {exp.location} • {exp.type}
+                      <span className="text-sm font-medium text-gray-500">
+                        {exp.date} • {exp.location}
                       </span>
                     </div>
                   </div>
 
                   {/* Middle (Bullets) */}
-                  <ul className="mt-2 space-y-2.5 text-base text-muted-foreground">
+                  <ul className="space-y-3 text-[15px] text-gray-600">
                     {exp.bullets.map((bullet, i) => (
                       <li key={i} className="flex items-start gap-3">
-                        <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-violet/50" />
+                        <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-gray-300" />
                         <span className="leading-relaxed">{bullet}</span>
                       </li>
                     ))}
                   </ul>
 
                   {/* Bottom (Tech Stack & Buttons) */}
-                  <div className="mt-4 flex flex-col gap-5 border-t border-white/5 pt-6 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
+                  <div className="mt-2 flex flex-col gap-5 pt-2 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
                     <div className="flex flex-wrap gap-2">
                       {exp.techStack.map(tech => (
-                        <span key={tech} className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-foreground transition-colors hover:bg-white/10">
+                        <span key={tech} className="rounded-md bg-gray-50 border border-gray-200 px-2.5 py-1 text-[11px] font-medium text-gray-600">
                           {tech}
                         </span>
                       ))}
@@ -242,17 +228,17 @@ export function Experience() {
                     {exp.links && (
                       <div className="flex shrink-0 flex-wrap items-center gap-3">
                         {exp.links.certificate && (
-                          <a href={exp.links.certificate} target="_blank" rel="noopener noreferrer" className="flex whitespace-nowrap items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-sm font-medium transition-colors hover:bg-white/10 hover:text-violet">
+                          <a href={exp.links.certificate} target="_blank" rel="noopener noreferrer" className="flex whitespace-nowrap items-center gap-1.5 rounded-full border border-gray-200 bg-white px-4 py-1.5 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-50 hover:text-blue-600 shadow-sm">
                             <Award className="h-4 w-4" /> View Certificate
                           </a>
                         )}
                         {exp.links.project && (
-                          <a href={exp.links.project} target="_blank" rel="noopener noreferrer" className="flex whitespace-nowrap items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-sm font-medium transition-colors hover:bg-white/10 hover:text-violet">
+                          <a href={exp.links.project} target="_blank" rel="noopener noreferrer" className="flex whitespace-nowrap items-center gap-1.5 rounded-full border border-gray-200 bg-white px-4 py-1.5 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-50 hover:text-blue-600 shadow-sm">
                             <ExternalLink className="h-4 w-4" /> View Project
                           </a>
                         )}
                         {exp.links.github && (
-                          <a href={exp.links.github} target="_blank" rel="noopener noreferrer" className="flex whitespace-nowrap items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-sm font-medium transition-colors hover:bg-white/10 hover:text-violet">
+                          <a href={exp.links.github} target="_blank" rel="noopener noreferrer" className="flex whitespace-nowrap items-center gap-1.5 rounded-full border border-gray-200 bg-white px-4 py-1.5 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-50 hover:text-blue-600 shadow-sm">
                             <Github className="h-4 w-4" /> GitHub
                           </a>
                         )}
