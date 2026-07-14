@@ -19,7 +19,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Portfolio of Shabareesh S Gowda — CSE student, Flutter & Java developer. Open for 2026 internships in mobile, full-stack and AI.",
+          "Portfolio of Shabareesh S Gowda — CSE student, Flutter & full-stack developer.Building mobile apps, web applications, and AI-integrated products. Open for 2026 internships.",
       },
       { property: "og:title", content: "Shabareesh S Gowda — Flutter & Software Developer" },
       { property: "og:description", content: "Portfolio · Flutter · Java · DSA · Open for internships." },

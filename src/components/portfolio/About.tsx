@@ -28,16 +28,19 @@ export function About() {
             className="premium-card p-8 md:p-10"
           >
             <p className="text-base md:text-lg leading-relaxed text-gray-700">
-              Computer Science Engineering student at MITE with expertise in Flutter,
-              Java, Spring Boot, Firebase, artificial intelligence, and modern
-              software development. Experienced in designing and developing
-              innovative applications, including an AI-powered exam evaluation system
-              and an intelligent campus navigation platform. Skilled in building
-              scalable backend services, mobile applications, and user-focused
-              solutions. Demonstrates strong problem-solving abilities, software
-              engineering fundamentals, and the capability to independently deliver
-              end-to-end projects. Passionate about leveraging technology to solve
-              real-world challenges and create impactful digital products.
+              Computer Science Engineering student at MITE with hands-on experience
+              building across the full stack — Flutter mobile apps, React and
+              Node.js web applications, REST APIs with Spring Boot and Java, and
+              AI-integrated products using Google Gemini and OpenAI APIs.
+              Shipped projects include ScamShield (AI fraud detection app built for
+              SEBI's Securities Market TechSprint), EvalAI (AI-powered handwritten
+              answer sheet evaluator), and FireNotes (real-time Flutter notes app).
+              Also completed virtual internships at Walmart, JPMorgan Chase,
+              Deloitte, Quantium, and Skyscanner — covering data structures,
+              backend engineering, data analytics, and frontend development.
+              I build on both sides — mobile and web — and I'm currently looking
+              for an internship where I can contribute across the stack, learn from
+              senior engineers, and grow into a well-rounded AI-curious developer.
             </p>
             <p className="mt-6 leading-relaxed text-gray-600">
               I genuinely love turning real-world friction into clean, fast

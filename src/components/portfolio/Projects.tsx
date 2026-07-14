@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight, Brain, Flame, Github, MapPin, Plus, Sparkles, Code2 } from "lucide-react";
+import { ArrowUpRight, Brain, Flame, Github, MapPin, Plus, Sparkles, Code2, Shield } from "lucide-react";
 import { SectionHeader } from "./Section";
 import firenotesLogo from "@/assets/firenotes.png";
 import evalaILogo from "@/assets/evalai.png";
+import scamshieldLogo from "@/assets/scam_shield.png";
 
 type Project = {
   title: string;
@@ -19,6 +20,26 @@ type Project = {
 
 const projects: Project[] = [
   {
+    title: "EvalAI",
+    tag: "Shipped",
+    desc: "Developed a Flutter-based mobile application that automates the grading of handwritten student answer sheets using Google Gemini AI. The app analyzes answers, compares them with expected responses, assigns marks, and generates personalized feedback highlighting strengths, weaknesses, and missing concepts. Built with Firebase for secure authentication and report storage, it also includes performance analytics dashboards, PDF report generation, and customizable grading settings to streamline the evaluation process for educators.",
+    tech: ["Flutter", "Dart", "Google Gemini AI", "Firebase", "Provider", "fl_chart", "Google ML Kit", "PDF Generation", "Analytics"],
+    Icon: Brain,
+    repo: "https://github.com/shabareesh390/EvalAI",
+    accent: "bg-indigo-500",
+    logo: evalaILogo,
+  },
+  {
+    title: "ScamShield : Real-Time Detection of Phishing & Synthetic Media Scams in Securities Markets",
+    tag: "Shipped",
+    desc: "Built for SEBI Securities Market TechSprint Hackathon — an AI-powered Flutter mobile app that detects phishing messages, suspicious links, and deepfake investment videos targeting retail investors in India's securities markets. Powered by OpenAI API with real-time community scam reporting via Firebase Firestore.",
+    tech: ["Flutter", "Dart", "Firebase", "OpenAI API", "Provider", "Google ML Kit", "Cloud Firestore", "Firebase Auth"],
+    Icon: Shield,
+    repo: "https://github.com/shabareesh390/ScamShield",
+    accent: "bg-green-500",
+    logo: scamshieldLogo,
+  },
+  {
     title: "Firebase Notes App",
     tag: "Shipped",
     desc: "A full-stack mobile notes app built with Flutter and Firebase. Real-time note sync via Cloud Firestore, secure Email/Password and Google Sign-In, and a clean dark/light theme UI powered by Provider for state management.",
@@ -28,16 +49,6 @@ const projects: Project[] = [
     repo: "https://github.com/shabareesh390/FireNotes.git",
     accent: "bg-orange-500",
     logo: firenotesLogo,
-  },
-  {
-    title: "EvalAI",
-    tag: "Shipped",
-    desc: "Developed a Flutter-based mobile application that automates the grading of handwritten student answer sheets using Google Gemini AI. The app analyzes answers, compares them with expected responses, assigns marks, and generates personalized feedback highlighting strengths, weaknesses, and missing concepts. Built with Firebase for secure authentication and report storage, it also includes performance analytics dashboards, PDF report generation, and customizable grading settings to streamline the evaluation process for educators.",
-    tech: ["Flutter", "Dart", "Google Gemini AI", "Firebase", "Provider", "fl_chart", "Google ML Kit", "PDF Generation", "Analytics"],
-    Icon: Brain,
-    repo: "https://github.com/shabareesh390/EvalAI",
-    accent: "bg-indigo-500",
-    logo: evalaILogo,
   },
   {
     title: "PathPilot",

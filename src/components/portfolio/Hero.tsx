@@ -5,7 +5,7 @@ import avatar from "@/assets/avatar.jpg";
 
 const phrases = [
   "Full stack developer",
-  "Solving real world problems by Web App solutions",
+  "Building AI-powered mobile apps and web solutions",
   "MERN Stack Developer",
   "Java Developer",
 ];
