@@ -151,7 +151,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative mx-auto w-full max-w-sm hidden md:block"
+          className="relative mx-auto w-full max-w-sm block"
         >
           <div className="relative aspect-[4/5] w-full bg-white rounded-3xl p-3 shadow-[0_8px_30px_rgb(0,0,0,0.08)] border border-gray-100">
             <img
