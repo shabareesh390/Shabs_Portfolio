@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { SectionHeader } from "./Section";
 import {
   SiFlutter, SiDart, SiCplusplus, SiC, SiFirebase, SiGit, SiGithub, SiGoogle, SiAnthropic, SiCss, SiHtml5, SiJavascript, SiSpringboot,
-  SiTypescript, SiSupabase, SiPython,
+  SiTypescript, SiSupabase, SiPython, SiMongodb, SiExpress, SiReact, SiNodedotjs
 } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
 import { Brain, Lightbulb, Globe, Package, Zap, Cloud, Database } from "lucide-react";
@@ -32,6 +32,10 @@ const skills = [
   { Icon: SiTypescript, name: "TypeScript", level: 50, color: "#3178C6" },
   { Icon: Database, name: "SQL", level: 76, color: "#3b82f6" },
   { Icon: SiPython, name: "Python", level: 70, color: "#3776AB" },
+  { Icon: SiMongodb, name: "MongoDB", level: 65, color: "#47A248" },
+  { Icon: SiExpress, name: "Express.js", level: 60, color: "#000000" },
+  { Icon: SiReact, name: "React", level: 68, color: "#61DAFB" },
+  { Icon: SiNodedotjs, name: "Node.js", level: 70, color: "#339933" },
 ];
 
 export function Skills() {
