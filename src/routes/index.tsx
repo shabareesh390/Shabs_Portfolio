@@ -15,7 +15,7 @@ import { Footer } from "@/components/portfolio/Footer";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Shabareesh S Gowda — Flutter & Software Developer" },
+      { title: "Shabareesh S Gowda — Full Stack Developer" },
       {
         name: "description",
         content:

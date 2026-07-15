@@ -86,9 +86,8 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mt-6 max-w-xl text-base text-gray-600 md:text-lg leading-relaxed"
           >
-            Computer Science Engineering student at MITE. I build Flutter mobile 
-            apps, full-stack web applications, and AI-integrated products — 
-            from idea to shipped product.
+            Computer Science Engineering student at MITE, specializing in building 
+            mobile apps, web platforms, and AI-driven products from concept to launch.
           </motion.p>
 
           <motion.div

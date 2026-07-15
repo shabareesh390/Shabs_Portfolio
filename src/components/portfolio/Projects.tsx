@@ -5,6 +5,7 @@ import firenotesLogo from "@/assets/firenotes.png";
 import evalaILogo from "@/assets/evalai.png";
 import scamshieldLogo from "@/assets/scam_shield.png";
 import pathpilotLogo from "@/assets/PathPilot.png";
+import croplensLogo from "@/assets/CropLens.png";
 
 type Project = {
   title: string;
@@ -41,12 +42,22 @@ const projects: Project[] = [
     logo: scamshieldLogo,
   },
   {
+    title: "CropLens",
+    tag: "Shipped",
+    desc: "Built a web-based assessment platform for SBI Hackathon @ GFF 2026, That modernizes Kisan Credit Card (KCC) loan approval by replacing manual field surveys with satellite-based analysis. Bank officers initiate an assessment using a farmer's Record of Rights number, locate the exact farm boundary on an interactive Google Maps satellite view, and trigger a Python backend that computes an NDVI-based crop health score, estimates yield across crop varieties like Paddy, Cotton, and Sugarcane, and projects income using live MSP pricing. The system combines these signals into a 100-point credit score and a data-driven loan recommendation, with Firebase handling officer authentication and assessment records.",
+    tech: ["React", "Vite", "TanStack Router", "Leaflet", "Google Maps API", "Python", "Firebase Auth", "Firestore", "NDVI Analysis"],
+    Icon: Sparkles,
+    href: "https://croplensmap.vercel.app",
+    repo: "https://github.com/shabareesh390/CropLens",
+    accent: "bg-teal-500",
+    logo: croplensLogo,
+  },
+  {
     title: "FireNotes App",
     tag: "Shipped",
     desc: "A full-stack mobile notes app built with Flutter and Firebase. Real-time note sync via Cloud Firestore, secure Email/Password and Google Sign-In, and a clean dark/light theme UI powered by Provider for state management.",
     tech: ["Flutter", "Dart", "Firebase Auth", "Cloud Firestore", "Provider", "Google Sign-In"],
     Icon: Flame,
-    href: "https://github.com/shabareesh390/FireNotes.git",
     repo: "https://github.com/shabareesh390/FireNotes.git",
     accent: "bg-orange-500",
     logo: firenotesLogo,
@@ -115,6 +126,17 @@ function ProjectCard({ p, i }: { p: Project; i: number }) {
             >
               <Github className="h-4 w-4 mr-2" />
               GitHub
+            </a>
+          )}
+          {p.href && (
+            <a
+              href={p.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="primary-btn w-full justify-center"
+            >
+              Live App
+              <ArrowUpRight className="h-4 w-4 ml-1" />
             </a>
           )}
           {p.upcoming && (
