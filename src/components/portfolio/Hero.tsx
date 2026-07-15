@@ -87,7 +87,7 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mt-6 max-w-xl text-base text-gray-600 md:text-lg leading-relaxed"
           >
-            Computer Science Engineering student at MITE, specializing in building 
+            Computer Science Engineering student at MITE, specializing in building
             mobile apps, web platforms, and AI-driven products from concept to launch.
           </motion.p>
 
@@ -137,7 +137,7 @@ export function Hero() {
           >
             {[
               { v: "15+", l: "Core Tech" },
-              { v: projects.filter(p => p.tag === "Shipped").length.toString(), l: "Shipped" },
+              { v: projects.filter(p => p.tag === "Shipped").length.toString(), l: "Shipped Projects" },
               { v: "2nd Yr", l: "B.E. CSE" },
             ].map((s) => (
               <div key={s.l} className="flex flex-col">

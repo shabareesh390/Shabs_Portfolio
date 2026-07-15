@@ -32,11 +32,12 @@ export function About() {
               building across the full stack — Flutter mobile apps, React and
               Node.js web applications, REST APIs with Spring Boot and Java, and
               AI-integrated products using Google Gemini and OpenAI APIs.
-              Shipped projects include ScamShield (AI fraud detection app built for
-              SEBI's Securities Market TechSprint), EvalAI (AI-powered handwritten
-              answer sheet evaluator), and FireNotes (real-time Flutter notes app).
-              Also completed virtual internships at Walmart, JPMorgan Chase,
-              Deloitte, Quantium, and Skyscanner — covering data structures,
+              Shipped projects include <strong>ScamShield</strong> (AI fraud detection app built for
+              SEBI's Securities Market TechSprint), <strong>EvalAI</strong> (AI-powered handwritten
+              answer sheet evaluator), <strong>CropLens</strong> (satellite-based assessment platform
+              for SBI Hackathon), and <strong>FireNotes</strong> (real-time Flutter notes app).
+              Also completed <strong>virtual internships</strong> at <strong>Walmart</strong>, <strong>JPMorgan Chase</strong>,
+              <strong>Deloitte</strong>, <strong>Quantium</strong>, and <strong>Skyscanner</strong> — covering data structures,
               backend engineering, data analytics, and frontend development.
               I build on both sides — mobile and web — and I'm currently looking
               for an internship where I can contribute across the stack, learn from
