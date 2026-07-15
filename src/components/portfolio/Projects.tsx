@@ -20,13 +20,14 @@ type Project = {
   logo?: string;
 };
 
-const projects: Project[] = [
+export const projects: Project[] = [
   {
     title: "EvalAI-Smart Evaluation System ",
     tag: "Shipped",
     desc: "Developed a Flutter-based mobile application that automates the grading of handwritten student answer sheets using Google Gemini AI. The app analyzes answers, compares them with expected responses, assigns marks, and generates personalized feedback highlighting strengths, weaknesses, and missing concepts. Built with Firebase for secure authentication and report storage, it also includes performance analytics dashboards, PDF report generation, and customizable grading settings to streamline the evaluation process for educators.",
     tech: ["Flutter", "Dart", "Google Gemini AI", "Firebase", "Provider", "fl_chart", "Google ML Kit", "PDF Generation", "Analytics"],
     Icon: Brain,
+    href: "https://drive.google.com/file/d/11B5Mq4TXP__74k8XXyxkLo07YFeXtzL1/view?usp=drive_link",
     repo: "https://github.com/shabareesh390/EvalAI",
     accent: "bg-indigo-500",
     logo: evalaILogo,
@@ -37,6 +38,7 @@ const projects: Project[] = [
     desc: "Built for SEBI Securities Market TechSprint Hackathon — an AI-powered Flutter mobile app that detects phishing messages, suspicious links, and deepfake investment videos targeting retail investors in India's securities markets. Powered by OpenAI API with real-time community scam reporting via Firebase Firestore.",
     tech: ["Flutter", "Dart", "Firebase", "OpenAI API", "Provider", "Google ML Kit", "Cloud Firestore", "Firebase Auth"],
     Icon: Shield,
+    href: "https://drive.google.com/file/d/1XH8_GCAQicW3EA9TZkoKSbyrpEuqaVrW/view?usp=drive_link",
     repo: "https://github.com/shabareesh390/ScamShield",
     accent: "bg-green-500",
     logo: scamshieldLogo,
@@ -58,6 +60,7 @@ const projects: Project[] = [
     desc: "A full-stack mobile notes app built with Flutter and Firebase. Real-time note sync via Cloud Firestore, secure Email/Password and Google Sign-In, and a clean dark/light theme UI powered by Provider for state management.",
     tech: ["Flutter", "Dart", "Firebase Auth", "Cloud Firestore", "Provider", "Google Sign-In"],
     Icon: Flame,
+    href: "https://drive.google.com/file/d/1kyC65yI8rx0BnjAmBIAyzOy0k5x6i3bi/view?usp=drive_link",
     repo: "https://github.com/shabareesh390/FireNotes.git",
     accent: "bg-orange-500",
     logo: firenotesLogo,

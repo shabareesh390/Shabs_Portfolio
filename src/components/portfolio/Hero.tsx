@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { ArrowDown, Download, Github, Linkedin, Mail, Sparkles, FolderDot } from "lucide-react";
 import avatar from "@/assets/avatar.jpg";
+import { projects } from "./Projects";
 
 const phrases = [
   "Full stack developer",
@@ -136,7 +137,7 @@ export function Hero() {
           >
             {[
               { v: "15+", l: "Core Tech" },
-              { v: "3", l: "Shipped" },
+              { v: projects.filter(p => p.tag === "Shipped").length.toString(), l: "Shipped" },
               { v: "2nd Yr", l: "B.E. CSE" },
             ].map((s) => (
               <div key={s.l} className="flex flex-col">
