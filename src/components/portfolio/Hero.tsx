@@ -86,7 +86,9 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mt-6 max-w-xl text-base text-gray-600 md:text-lg leading-relaxed"
           >
-            Computer Science Engineering student at MITE. Building mobile apps, solving complex problems, and exploring scalable software architectures. Always focused on clean code and robust solutions.
+            Computer Science Engineering student at MITE. I build Flutter mobile 
+            apps, full-stack web applications, and AI-integrated products — 
+            from idea to shipped product.
           </motion.p>
 
           <motion.div
@@ -134,8 +136,8 @@ export function Hero() {
             className="mt-12 grid max-w-md grid-cols-3 gap-6"
           >
             {[
-              { v: "9+", l: "Core Tech" },
-              { v: "2", l: "Shipped" },
+              { v: "15+", l: "Core Tech" },
+              { v: "3", l: "Shipped" },
               { v: "2nd Yr", l: "B.E. CSE" },
             ].map((s) => (
               <div key={s.l} className="flex flex-col">
