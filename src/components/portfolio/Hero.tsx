@@ -8,7 +8,7 @@ const phrases = [
   "Full stack developer",
   "Building AI-powered mobile apps and web solutions",
   "MERN Stack Developer",
-  "Java Developer",
+  "Crafting Efficient Apps with Java, Flutter, DSA & OOP",
 ];
 
 function useTyping() {
