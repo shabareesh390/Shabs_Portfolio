@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight, Brain, Flame, Github, MapPin, Plus, Sparkles, Code2, Shield } from "lucide-react";
+import { ArrowUpRight, Brain, Flame, Github, MapPin, Plus, Sparkles, Code2, Shield, ShoppingCart } from "lucide-react";
 import { SectionHeader } from "./Section";
 import firenotesLogo from "@/assets/firenotes.png";
 import evalaILogo from "@/assets/evalai.png";
@@ -21,6 +21,15 @@ type Project = {
 };
 
 export const projects: Project[] = [
+  {
+    title: "LuxeCart – Full-Stack MERN E-Commerce Platform",
+    tag: "Shipped",
+    desc: "Developed LuxeCart, a full-stack e-commerce web application during my MERN Stack Developer Internship at Codec Technologies. The platform provides a complete online shopping experience with secure authentication, product management, order processing, and payment integration.",
+    tech: ["MongoDB", "Express.js", "React.js", "Node.js", "Tailwind CSS", "Vite", "Zustand", "React Router", "Stripe", "Cloudinary"],
+    Icon: ShoppingCart,
+    repo: "https://github.com/shabareesh390/E-Commerce-MERN",
+    accent: "bg-blue-500",
+  },
   {
     title: "EvalAI-Smart Evaluation System ",
     tag: "Shipped",
