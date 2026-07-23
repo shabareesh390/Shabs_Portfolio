@@ -14,6 +14,7 @@ import certCampusCrew from "@/assets/CampusCrew_Cert.jpeg";
 import certWalmart from "@/assets/walmart_Cert.png";
 import certQuantium from "@/assets/Quantium_Cert.png";
 import certSkyScanner from "@/assets/SkyScanner_Cert.png";
+import certCodec from "@/assets/CodecTechnology.png";
 
 type Certificate = {
   title: string;
@@ -115,6 +116,14 @@ const certificates: Certificate[] = [
     image: certInfosysAI,
     tag: "Course",
     accent: "linear-gradient(135deg, #67e8f9, #818cf8)",
+  },
+  {
+    title: "Codec Technology Certificate",
+    issuer: "Codec Technology",
+    date: "2026",
+    image: certCodec,
+    tag: "Certification",
+    accent: "linear-gradient(135deg, #10b981, #14b8a6)",
   },
   {
     title: "CampusCrew Certificate",

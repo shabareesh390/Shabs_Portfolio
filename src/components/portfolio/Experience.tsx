@@ -6,6 +6,7 @@ import jpMorganCert from "../../assets/JPMorganChase_Cert.png";
 import walmartCert from "../../assets/walmart_Cert.png";
 import quantiumCert from "../../assets/Quantium_Cert.png";
 import skyScannerCert from "../../assets/SkyScanner_Cert.png";
+import codecCert from "../../assets/LOR-CodecTechnology.png";
 import { SectionHeader } from "./Section";
 
 interface ExperienceLink {
@@ -29,6 +30,25 @@ interface Experience {
 }
 
 const experiences: Experience[] = [
+  {
+    id: "codec-intern",
+    role: "MERN Stack Developer Intern",
+    company: "Codec Technologies India",
+    logo: Server,
+    date: "June 2026 - July 2026",
+    location: "Mumbai, Maharashtra, India (Remote)",
+    type: "Internship",
+    status: "Completed",
+    bullets: [
+      "Contributed to the development of a full-stack E-Commerce platform utilizing the MERN stack.",
+      "Focused on creating responsive user interfaces and implementing secure authentication methods.",
+      "Developed RESTful APIs and integrated payment solutions, enhancing the overall functionality of the application."
+    ],
+    techStack: ["MongoDB", "Express.js", "React.js", "Node.js", "JavaScript", "Tailwind CSS", "Vite", "Zustand", "React Router", "JWT", "bcrypt.js", "Stripe"],
+    links: {
+      certificate: codecCert,
+    }
+  },
   {
     id: "walmart",
     role: "Advanced Software Engineer Virtual Intern",
