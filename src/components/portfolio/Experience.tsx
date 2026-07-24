@@ -7,6 +7,7 @@ import walmartCert from "../../assets/walmart_Cert.png";
 import quantiumCert from "../../assets/Quantium_Cert.png";
 import skyScannerCert from "../../assets/SkyScanner_Cert.png";
 import codecCert from "../../assets/LOR-CodecTechnology.png";
+import codeAlphaCert from "../../assets/CodeAlphaOfferLetter.png";
 import { SectionHeader } from "./Section";
 
 interface ExperienceLink {
@@ -35,8 +36,8 @@ const experiences: Experience[] = [
     role: "Application Developer Intern",
     company: "CodeAlpha",
     logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2ujdUKy-jHVxPSSVCeLGu_0SUfmpTObRGbQ-X9jw8_-A0xGVEJECYFL8&s=10",
-    date: "Ongoing",
-    location: "Remote",
+    date: "July 2026 - Aug 2026 ",
+    location: "Lucknow, Uttar Pradesh, India (Remote)",
     type: "Internship",
     status: "Ongoing",
     bullets: [
@@ -58,7 +59,7 @@ const experiences: Experience[] = [
       "Provider"
     ],
     links: {
-      github: "https://github.com/shabareesh390?tab=repositories",
+      certificate: codeAlphaCert,
     }
   },
   {
@@ -85,8 +86,8 @@ const experiences: Experience[] = [
     role: "Technology Analyst Virtual Intern",
     company: "Deloitte",
     logo: "https://icon.horse/icon/deloitte.com",
-    date: "Completed",
-    location: "Remote",
+    date: "Jun 2026 - jul 2026",
+    location: "Tokyo, Japan , Remote",
     type: "Internship",
     status: "Completed",
     bullets: [
@@ -106,7 +107,7 @@ const experiences: Experience[] = [
     role: "Software Engineer Virtual Intern",
     company: "JPMorganChase",
     logo: "https://icon.horse/icon/jpmorganchase.com",
-    date: "Completed",
+    date: "Jul 2026",
     location: "Remote",
     type: "Internship",
     status: "Completed",
@@ -127,7 +128,7 @@ const experiences: Experience[] = [
     role: "Advanced Software Engineer Virtual Intern",
     company: "Walmart",
     logo: "https://icon.horse/icon/walmart.com",
-    date: "Completed",
+    date: "Jul 2026",
     location: "Remote",
     type: "Internship",
     status: "Completed",
@@ -148,7 +149,7 @@ const experiences: Experience[] = [
     role: "Quantium Software Engineering Virtual Intern",
     company: "Quantium",
     logo: "https://icon.horse/icon/quantium.com",
-    date: "Completed",
+    date: "Jul 2026",
     location: "Remote",
     type: "Internship",
     status: "Completed",
@@ -168,7 +169,7 @@ const experiences: Experience[] = [
     role: "Frontend Developer Virtual Intern",
     company: "Skyscanner",
     logo: "https://icon.horse/icon/skyscanner.net",
-    date: "Completed",
+    date: "Jul 2026",
     location: "Remote",
     type: "Internship",
     status: "Completed",
@@ -221,9 +222,9 @@ export function Experience() {
                     <div className="flex items-start gap-4">
                       <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white shadow-sm border border-gray-100 text-blue-600 transition-transform duration-300 group-hover:scale-110 overflow-hidden">
                         {typeof exp.logo === 'string' ? (
-                          <img 
-                            src={exp.logo} 
-                            alt={`${exp.company} logo`} 
+                          <img
+                            src={exp.logo}
+                            alt={`${exp.company} logo`}
                             className="h-full w-full object-cover"
                             onError={(e) => {
                               const fallbackUrl = `https://ui-avatars.com/api/?name=${encodeURIComponent(exp.company)}&background=eff6ff&color=2563eb`;
