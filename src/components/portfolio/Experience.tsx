@@ -31,6 +31,37 @@ interface Experience {
 
 const experiences: Experience[] = [
   {
+    id: "flutter",
+    role: "Application Developer Intern",
+    company: "CodeAlpha",
+    logo: Smartphone,
+    date: "Ongoing",
+    location: "Remote",
+    type: "Internship",
+    status: "Ongoing",
+    bullets: [
+      "Developed cross-platform mobile applications using Flutter.",
+      "Built real-world apps including FittPulse, Fluenta, and FlashMind.",
+      "Integrated Firebase Authentication and Cloud Firestore.",
+      "Designed responsive Material 3 user interfaces.",
+      "Collaborated using Git and GitHub for version control.",
+    ],
+    techStack: [
+      "Flutter",
+      "Dart",
+      "Firebase",
+      "Cloud Firestore",
+      "Firebase Auth",
+      "Material 3",
+      "Git",
+      "GitHub",
+      "Provider"
+    ],
+    links: {
+      github: "https://github.com/shabareesh390?tab=repositories",
+    }
+  },
+  {
     id: "codec-intern",
     role: "MERN Stack Developer Intern",
     company: "Codec Technologies India",
@@ -47,26 +78,6 @@ const experiences: Experience[] = [
     techStack: ["MongoDB", "Express.js", "React.js", "Node.js", "JavaScript", "Tailwind CSS", "Vite", "Zustand", "React Router", "JWT", "bcrypt.js", "Stripe"],
     links: {
       certificate: codecCert,
-    }
-  },
-  {
-    id: "walmart",
-    role: "Advanced Software Engineer Virtual Intern",
-    company: "Walmart",
-    logo: Briefcase,
-    date: "Completed",
-    location: "Remote",
-    type: "Internship",
-    status: "Completed",
-    bullets: [
-      "Completed the Advanced Software Engineering Job Simulation where I solved difficult technical projects for a variety of teams at Walmart.",
-      "Developed a novel version of a heap data structure in Java for Walmart’s shipping department, showcasing strong problem-solving and algorithmic skills.",
-      "Designed a UML class diagram for a data processor, considering different operating modes and database connections.",
-      "Created an entity relationship diagram to design a new database accounting for all requirements provided by Walmart’s pet department."
-    ],
-    techStack: ["Data Preprocessing", "Data Structures", "Database Design", "Java Programming", "Process Optimization", "Python Programming", "Software Architecture", "SQL Database", "UML Modeling"],
-    links: {
-      certificate: walmartCert,
     }
   },
   {
@@ -112,6 +123,27 @@ const experiences: Experience[] = [
     }
   },
   {
+    id: "walmart",
+    role: "Advanced Software Engineer Virtual Intern",
+    company: "Walmart",
+    logo: Briefcase,
+    date: "Completed",
+    location: "Remote",
+    type: "Internship",
+    status: "Completed",
+    bullets: [
+      "Completed the Advanced Software Engineering Job Simulation where I solved difficult technical projects for a variety of teams at Walmart.",
+      "Developed a novel version of a heap data structure in Java for Walmart’s shipping department, showcasing strong problem-solving and algorithmic skills.",
+      "Designed a UML class diagram for a data processor, considering different operating modes and database connections.",
+      "Created an entity relationship diagram to design a new database accounting for all requirements provided by Walmart’s pet department."
+    ],
+    techStack: ["Data Preprocessing", "Data Structures", "Database Design", "Java Programming", "Process Optimization", "Python Programming", "Software Architecture", "SQL Database", "UML Modeling"],
+    links: {
+      certificate: walmartCert,
+    }
+  },
+
+  {
     id: "quantium",
     role: "Quantium Software Engineering Virtual Intern",
     company: "Quantium",
@@ -150,27 +182,7 @@ const experiences: Experience[] = [
       certificate: skyScannerCert,
     }
   },
-  {
-    id: "flutter",
-    role: "Flutter Developer",
-    company: "Independent Projects",
-    logo: Smartphone,
-    date: "Ongoing",
-    location: "Remote",
-    type: "Freelance",
-    status: "Ongoing",
-    bullets: [
-      "Built scalable Flutter applications.",
-      "Integrated Firebase Authentication.",
-      "Developed REST API features.",
-      "Implemented state management.",
-      "Collaborated using Git & GitHub.",
-    ],
-    techStack: ["Flutter", "Firebase", "REST API", "Git", "Hive", "Provider"],
-    links: {
-      github: "https://github.com/shabareesh390?tab=repositories",
-    }
-  },
+
 ];
 
 export function Experience() {
