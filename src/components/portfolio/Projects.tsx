@@ -24,16 +24,6 @@ type Project = {
 
 export const projects: Project[] = [
   {
-    title: "LuxeCart – Full-Stack MERN E-Commerce Platform",
-    tag: "Shipped",
-    desc: "Developed LuxeCart, a full-stack e-commerce web application during my MERN Stack Developer Internship at Codec Technologies. The platform provides a complete online shopping experience with secure authentication, product management, order processing, and payment integration.",
-    tech: ["MongoDB", "Express.js", "React.js", "Node.js", "Tailwind CSS", "Vite", "Zustand", "React Router", "Stripe", "Cloudinary"],
-    Icon: ShoppingCart,
-    repo: "https://github.com/shabareesh390/E-Commerce-MERN",
-    accent: "bg-blue-500",
-    logo: luxecartLogo,
-  },
-  {
     title: "EvalAI-Smart Evaluation System ",
     tag: "Shipped",
     desc: "Developed a Flutter-based mobile application that automates the grading of handwritten student answer sheets using Google Gemini AI. The app analyzes answers, compares them with expected responses, assigns marks, and generates personalized feedback highlighting strengths, weaknesses, and missing concepts. Built with Firebase for secure authentication and report storage, it also includes performance analytics dashboards, PDF report generation, and customizable grading settings to streamline the evaluation process for educators.",
@@ -44,6 +34,18 @@ export const projects: Project[] = [
     accent: "bg-indigo-500",
     logo: evalaILogo,
   },
+
+  {
+    title: "LuxeCart – Full-Stack MERN E-Commerce Platform",
+    tag: "Shipped",
+    desc: "Developed LuxeCart, a full-stack e-commerce web application during my MERN Stack Developer Internship at Codec Technologies. The platform provides a complete online shopping experience with secure authentication, product management, order processing, and payment integration.",
+    tech: ["MongoDB", "Express.js", "React.js", "Node.js", "Tailwind CSS", "Vite", "Zustand", "React Router", "Stripe", "Cloudinary"],
+    Icon: ShoppingCart,
+    repo: "https://github.com/shabareesh390/E-Commerce-MERN",
+    accent: "bg-blue-500",
+    logo: luxecartLogo,
+  },
+
   {
     title: "ScamShield : Real-Time Detection of Phishing & Synthetic Media Scams in Securities Markets",
     tag: "Shipped",
