@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight, Brain, Flame, Github, MapPin, Plus, Sparkles, Code2, Shield, ShoppingCart } from "lucide-react";
+import { ArrowUpRight, Brain, Flame, Github, MapPin, Plus, Sparkles, Code2, Shield, ShoppingCart, Activity } from "lucide-react";
 import { SectionHeader } from "./Section";
 import firenotesLogo from "@/assets/firenotes.png";
 import evalaILogo from "@/assets/evalai.png";
@@ -7,6 +7,7 @@ import scamshieldLogo from "@/assets/scam_shield.png";
 import pathpilotLogo from "@/assets/PathPilot.png";
 import croplensLogo from "@/assets/CropLens.png";
 import luxecartLogo from "@/assets/LuxeCart.png";
+import fittpulseLogo from "@/assets/FittPulse.jpg";
 
 type Project = {
   title: string;
@@ -64,6 +65,17 @@ export const projects: Project[] = [
     repo: "https://github.com/shabareesh390/CropLens",
     accent: "bg-teal-500",
     logo: croplensLogo,
+  },
+  {
+    title: "FittPulse – AI-Powered Fitness Tracking App",
+    tag: "Shipped",
+    desc: "Developed FittPulse, a premium cross-platform fitness tracking application during my Application Developer Internship at CodeAlpha. Built using Flutter, Firebase, and Google's Gemini API, the app provides an intelligent fitness companion with a modern dark-themed, glassmorphic UI. Key features include personalized workout and diet recommendations powered by Gemini AI, interactive dashboards for tracking health metrics, and secure real-time data synchronization via Firebase Auth and Cloud Firestore. The app delivers a premium user experience with smooth animations, page transitions, and responsive UI elements.",
+    tech: ["Flutter", "Firebase", "Firestore", "Firebase Auth", "Google Gemini API", "fl_chart", "flutter_animate"],
+    Icon: Activity,
+    href: "https://drive.google.com/file/d/1evbbcJKB3Xm7L50yvt78gwpggD5WIjPu/view?usp=drive_link",
+    repo: "https://github.com/shabareesh390/CodeAlpha_FitnessTrackerApp",
+    accent: "bg-rose-500",
+    logo: fittpulseLogo,
   },
   {
     title: "FireNotes App",
