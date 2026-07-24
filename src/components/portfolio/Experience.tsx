@@ -19,7 +19,7 @@ interface Experience {
   id: string;
   role: string;
   company: string;
-  logo: React.ElementType;
+  logo: React.ElementType | string;
   date: string;
   location: string;
   type: string;
@@ -34,7 +34,7 @@ const experiences: Experience[] = [
     id: "flutter",
     role: "Application Developer Intern",
     company: "CodeAlpha",
-    logo: Smartphone,
+    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2ujdUKy-jHVxPSSVCeLGu_0SUfmpTObRGbQ-X9jw8_-A0xGVEJECYFL8&s=10",
     date: "Ongoing",
     location: "Remote",
     type: "Internship",
@@ -65,7 +65,7 @@ const experiences: Experience[] = [
     id: "codec-intern",
     role: "MERN Stack Developer Intern",
     company: "Codec Technologies India",
-    logo: Server,
+    logo: "https://icon.horse/icon/codectechnologies.in",
     date: "June 2026 - July 2026",
     location: "Mumbai, Maharashtra, India (Remote)",
     type: "Internship",
@@ -84,7 +84,7 @@ const experiences: Experience[] = [
     id: "deloitte",
     role: "Technology Analyst Virtual Intern",
     company: "Deloitte",
-    logo: Briefcase,
+    logo: "https://icon.horse/icon/deloitte.com",
     date: "Completed",
     location: "Remote",
     type: "Internship",
@@ -105,7 +105,7 @@ const experiences: Experience[] = [
     id: "swe-intern",
     role: "Software Engineer Virtual Intern",
     company: "JPMorganChase",
-    logo: Server,
+    logo: "https://icon.horse/icon/jpmorganchase.com",
     date: "Completed",
     location: "Remote",
     type: "Internship",
@@ -126,7 +126,7 @@ const experiences: Experience[] = [
     id: "walmart",
     role: "Advanced Software Engineer Virtual Intern",
     company: "Walmart",
-    logo: Briefcase,
+    logo: "https://icon.horse/icon/walmart.com",
     date: "Completed",
     location: "Remote",
     type: "Internship",
@@ -147,7 +147,7 @@ const experiences: Experience[] = [
     id: "quantium",
     role: "Quantium Software Engineering Virtual Intern",
     company: "Quantium",
-    logo: Briefcase,
+    logo: "https://icon.horse/icon/quantium.com",
     date: "Completed",
     location: "Remote",
     type: "Internship",
@@ -167,7 +167,7 @@ const experiences: Experience[] = [
     id: "skyscanner",
     role: "Frontend Developer Virtual Intern",
     company: "Skyscanner",
-    logo: Briefcase,
+    logo: "https://icon.horse/icon/skyscanner.net",
     date: "Completed",
     location: "Remote",
     type: "Internship",
@@ -219,8 +219,24 @@ export function Experience() {
                   {/* Top Row */}
                   <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between border-b border-gray-100 pb-5">
                     <div className="flex items-start gap-4">
-                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gray-50 text-blue-600 transition-transform duration-300 group-hover:bg-blue-50">
-                        <exp.logo className="h-6 w-6" />
+                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white shadow-sm border border-gray-100 text-blue-600 transition-transform duration-300 group-hover:scale-110 overflow-hidden">
+                        {typeof exp.logo === 'string' ? (
+                          <img 
+                            src={exp.logo} 
+                            alt={`${exp.company} logo`} 
+                            className="h-full w-full object-cover"
+                            onError={(e) => {
+                              const fallbackUrl = `https://ui-avatars.com/api/?name=${encodeURIComponent(exp.company)}&background=eff6ff&color=2563eb`;
+                              if (e.currentTarget.src !== fallbackUrl) {
+                                e.currentTarget.src = fallbackUrl;
+                              } else {
+                                e.currentTarget.onerror = null;
+                              }
+                            }}
+                          />
+                        ) : (
+                          <exp.logo className="h-6 w-6" />
+                        )}
                       </div>
                       <div className="flex flex-col">
                         <h3 className="text-xl font-bold text-gray-900 leading-tight">{exp.role}</h3>
