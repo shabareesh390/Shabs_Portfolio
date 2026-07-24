@@ -6,6 +6,7 @@ import evalaILogo from "@/assets/evalai.png";
 import scamshieldLogo from "@/assets/scam_shield.png";
 import pathpilotLogo from "@/assets/PathPilot.png";
 import croplensLogo from "@/assets/CropLens.png";
+import luxecartLogo from "@/assets/LuxeCart.png";
 
 type Project = {
   title: string;
@@ -29,6 +30,7 @@ export const projects: Project[] = [
     Icon: ShoppingCart,
     repo: "https://github.com/shabareesh390/E-Commerce-MERN",
     accent: "bg-blue-500",
+    logo: luxecartLogo,
   },
   {
     title: "EvalAI-Smart Evaluation System ",
