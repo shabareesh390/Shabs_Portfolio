@@ -28,20 +28,9 @@ export function About() {
             className="premium-card p-8 md:p-10"
           >
             <p className="text-base md:text-lg leading-relaxed text-gray-700">
-              Computer Science Engineering student at MITE with hands-on experience
-              building across the full stack — Flutter mobile apps, React and
-              Node.js web applications, REST APIs with Spring Boot and Java, and
-              AI-integrated products using Google Gemini and OpenAI APIs.
-              Shipped projects include <strong>ScamShield</strong> (AI fraud detection app built for
-              SEBI's Securities Market TechSprint), <strong>EvalAI</strong> (AI-powered handwritten
-              answer sheet evaluator), <strong>CropLens</strong> (satellite-based assessment platform
-              for SBI Hackathon), and <strong>FireNotes</strong> (real-time Flutter notes app).
-              Also completed <strong>virtual internships</strong> at <strong>Walmart</strong>, <strong>JPMorgan Chase</strong>,
-              <strong>Deloitte</strong>, <strong>Quantium</strong>, and <strong>Skyscanner</strong> — covering data structures,
-              backend engineering, data analytics, and frontend development.
-              I build on both sides — mobile and web — and I'm currently looking
-              for an internship where I can contribute across the stack, learn from
-              senior engineers, and grow into a well-rounded AI-curious developer.
+              I'm a Computer Science Engineering student at MITE (Class of 2029) driven by a passion for building impactful software. My expertise spans the full stack, with a strong focus on crafting cross-platform mobile experiences using Flutter, developing responsive web applications with the MERN stack, and engineering scalable backends in Java Spring Boot. I have strong experience structuring databases with MongoDB and MySQL, and integrating BaaS platforms like Firebase and Supabase. Additionally, I am highly focused on building AI-integrated products leveraging Google Gemini, OpenAI, and Anthropic Claude.
+              <br /><br />
+              I thrive on hackathons and taking ideas from ZERO to ONE. My shipped projects include <strong>ScamShield</strong> (an AI fraud detection app for SEBI's TechSprint), <strong>CropLens</strong> (a satellite assessment platform for an SBI Hackathon), and practical tools like <strong>EvalAI</strong> and <strong>LuxeCart</strong>. Alongside my academic journey, I've gained hands-on industry experience through developer internships at <strong>CodeAlpha</strong> and <strong>Codec Technologies</strong>, as well as virtual engineering programs with <strong>JPMorgan Chase</strong>, <strong>Walmart</strong>, and <strong>Deloitte</strong>.
             </p>
             <p className="mt-6 leading-relaxed text-gray-600">
               I genuinely love turning real-world friction into clean, fast
