@@ -8,6 +8,7 @@ import pathpilotLogo from "@/assets/PathPilot.png";
 import croplensLogo from "@/assets/CropLens.png";
 import luxecartLogo from "@/assets/LuxeCart.png";
 import fittpulseLogo from "@/assets/FittPulse.jpg";
+import tallymatchLogo from "@/assets/TallyMatch.png";
 
 type Project = {
   title: string;
@@ -34,7 +35,16 @@ export const projects: Project[] = [
     accent: "bg-indigo-500",
     logo: evalaILogo,
   },
-
+  {
+    title: "TallyMatch – AI Reconciliation Agent",
+    tag: "Shipped",
+    desc: "An AI-powered UPI/bank reconciliation agent built for the ChatGPT Codex Hackathon 2026 under the \"AI for Bharat's Businesses\" track. It automatically matches bank settlement statements against a business's sales ledger by parsing messy real-world exports (CSV/PDF). It matches obvious transactions using rule-based logic, while an AI agent handles ambiguous cases—proposing likely matches with confidence scores and plain-language explanations before self-reviewing its own guesses.",
+    tech: ["React", "Vite", "TanStack Router", "Python Serverless", "OpenAI API", "pandas", "pdfplumber", "Vercel"],
+    Icon: Brain,
+    href: "https://codex-hackathon-tallymatch.vercel.app/",
+    accent: "bg-emerald-500",
+    logo: tallymatchLogo,
+  },
   {
     title: "LuxeCart – Full-Stack MERN E-Commerce Platform",
     tag: "Shipped",
