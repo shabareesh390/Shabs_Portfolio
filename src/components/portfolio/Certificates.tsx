@@ -3,6 +3,7 @@ import { Award, ChevronLeft, ChevronRight, ExternalLink, X } from "lucide-react"
 import { useState } from "react";
 import { SectionHeader } from "./Section";
 import certGenAI from "@/assets/Gen_AI_Microsoft_LinkedIn.png";
+import certOracle from "@/assets/Oracle_Cert.png";
 import certWebDash from "@/assets/cert-webdash.png";
 import certJava from "@/assets/LetsUpgrade_Java_Bootcamp.png";
 import certSql from "@/assets/LetsUpgrade_SQL_bootcamp.png";
@@ -34,6 +35,14 @@ const certificates: Certificate[] = [
     image: certGenAI,
     tag: "Certification",
     accent: "linear-gradient(135deg, #0284c7, #3b82f6)",
+  },
+  {
+    title: "Oracle Agentic AI Foundations Associate (2026)",
+    issuer: "Oracle",
+    date: "July 2026",
+    image: certOracle,
+    tag: "Certification",
+    accent: "linear-gradient(135deg, #f87171, #dc2626)",
   },
   {
     title: "Deloitte Certificate",
