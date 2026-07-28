@@ -42,6 +42,7 @@ export const projects: Project[] = [
     tech: ["React", "Vite", "TanStack Router", "Python Serverless", "OpenAI API", "pandas", "pdfplumber", "Vercel"],
     Icon: Brain,
     href: "https://codex-hackathon-tallymatch.vercel.app/",
+    repo: "https://github.com/shabareesh390/Codex_Hackathon",
     accent: "bg-emerald-500",
     logo: tallymatchLogo,
   },
