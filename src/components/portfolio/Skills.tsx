@@ -64,7 +64,7 @@ export function Skills() {
                   style={{ color: s.color }}
                 />
                 <div className="mt-4 font-semibold text-gray-900 text-sm tracking-tight">{s.name}</div>
-                
+
                 <div className="w-full mt-3 flex items-center justify-between text-xs text-gray-500 mb-1.5 font-medium">
                   <span>Level</span>
                   <span>{s.level}%</span>
@@ -85,7 +85,7 @@ export function Skills() {
         </div>
 
         <div className="mt-12 flex flex-wrap justify-center gap-3">
-          {["C Programming Certified", "Hackathon-ready", "Open Source curious", "Agile mindset"].map((b) => (
+          {["Strong DSA in JAVA", "Hackathon-ready", "Open Source curious", "Agile mindset"].map((b) => (
             <span key={b} className="rounded-full border border-gray-200 bg-gray-50 px-5 py-2 text-xs font-medium text-gray-600">
               {b}
             </span>
