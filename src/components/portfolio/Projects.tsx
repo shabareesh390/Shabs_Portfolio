@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight, Brain, Flame, Github, MapPin, Plus, Sparkles, Code2, Shield, ShoppingCart, Activity } from "lucide-react";
+import { ArrowUpRight, Brain, Flame, Github, MapPin, Plus, Sparkles, Code2, Shield, ShoppingCart, Activity, Award } from "lucide-react";
 import { SectionHeader } from "./Section";
 import firenotesLogo from "@/assets/firenotes.png";
 import evalaILogo from "@/assets/evalai.png";
@@ -10,7 +10,7 @@ import luxecartLogo from "@/assets/LuxeCart.png";
 import fittpulseLogo from "@/assets/FittPulse.jpg";
 import tallymatchLogo from "@/assets/TallyMatch.png";
 
-type Project = {
+export type Project = {
   title: string;
   tag: string;
   desc: string;
@@ -21,6 +21,7 @@ type Project = {
   accent: string;
   upcoming?: boolean;
   logo?: string;
+  certImage?: string;
 };
 
 export const projects: Project[] = [
@@ -36,17 +37,6 @@ export const projects: Project[] = [
     logo: evalaILogo,
   },
   {
-    title: "TallyMatch – AI Reconciliation Agent",
-    tag: "Shipped",
-    desc: "An AI-powered UPI/bank reconciliation agent built for the ChatGPT Codex Hackathon 2026 under the \"AI for Bharat's Businesses\" track. It automatically matches bank settlement statements against a business's sales ledger by parsing messy real-world exports (CSV/PDF). It matches obvious transactions using rule-based logic, while an AI agent handles ambiguous cases—proposing likely matches with confidence scores and plain-language explanations before self-reviewing its own guesses.",
-    tech: ["React", "Vite", "TanStack Router", "Python Serverless", "OpenAI API", "pandas", "pdfplumber", "Vercel"],
-    Icon: Brain,
-    href: "https://codex-hackathon-tallymatch.vercel.app/",
-    repo: "https://github.com/shabareesh390/Codex_Hackathon",
-    accent: "bg-emerald-500",
-    logo: tallymatchLogo,
-  },
-  {
     title: "LuxeCart – Full-Stack MERN E-Commerce Platform",
     tag: "Shipped",
     desc: "Developed LuxeCart, a full-stack e-commerce web application during my MERN Stack Developer Internship at Codec Technologies. The platform provides a complete online shopping experience with secure authentication, product management, order processing, and payment integration.",
@@ -55,29 +45,6 @@ export const projects: Project[] = [
     repo: "https://github.com/shabareesh390/E-Commerce-MERN",
     accent: "bg-blue-500",
     logo: luxecartLogo,
-  },
-
-  {
-    title: "ScamShield : Real-Time Detection of Phishing & Synthetic Media Scams in Securities Markets",
-    tag: "Shipped",
-    desc: "Built for SEBI Securities Market TechSprint Hackathon — an AI-powered Flutter mobile app that detects phishing messages, suspicious links, and deepfake investment videos targeting retail investors in India's securities markets. Powered by OpenAI API with real-time community scam reporting via Firebase Firestore.",
-    tech: ["Flutter", "Dart", "Firebase", "OpenAI API", "Provider", "Google ML Kit", "Cloud Firestore", "Firebase Auth"],
-    Icon: Shield,
-    href: "https://drive.google.com/file/d/1XH8_GCAQicW3EA9TZkoKSbyrpEuqaVrW/view?usp=drive_link",
-    repo: "https://github.com/shabareesh390/ScamShield",
-    accent: "bg-green-500",
-    logo: scamshieldLogo,
-  },
-  {
-    title: "CropLens",
-    tag: "Shipped",
-    desc: "Built a web-based assessment platform for SBI Hackathon @ GFF 2026, That modernizes Kisan Credit Card (KCC) loan approval by replacing manual field surveys with satellite-based analysis. Bank officers initiate an assessment using a farmer's Record of Rights number, locate the exact farm boundary on an interactive Google Maps satellite view, and trigger a Python backend that computes an NDVI-based crop health score, estimates yield across crop varieties like Paddy, Cotton, and Sugarcane, and projects income using live MSP pricing. The system combines these signals into a 100-point credit score and a data-driven loan recommendation, with Firebase handling officer authentication and assessment records.",
-    tech: ["React", "Vite", "TanStack Router", "Leaflet", "Google Maps API", "Python", "Firebase Auth", "Firestore", "NDVI Analysis"],
-    Icon: Sparkles,
-    href: "https://croplensmap.vercel.app",
-    repo: "https://github.com/shabareesh390/CropLens",
-    accent: "bg-teal-500",
-    logo: croplensLogo,
   },
   {
     title: "FittPulse – AI-Powered Fitness Tracking App",
@@ -113,7 +80,7 @@ export const projects: Project[] = [
   },
 ];
 
-function ProjectCard({ p, i }: { p: Project; i: number }) {
+export function ProjectCard({ p, i }: { p: Project; i: number }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -165,6 +132,17 @@ function ProjectCard({ p, i }: { p: Project; i: number }) {
             >
               <Github className="h-4 w-4 mr-2" />
               GitHub
+            </a>
+          )}
+          {p.certImage && (
+            <a
+              href={p.certImage}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="secondary-btn w-full justify-center"
+            >
+              <Award className="h-4 w-4 mr-2" />
+              View Cert
             </a>
           )}
           {p.href && (
