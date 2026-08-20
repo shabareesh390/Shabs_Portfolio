@@ -7,7 +7,7 @@ import walmartCert from "../../assets/walmart_Cert.png";
 import quantiumCert from "../../assets/Quantium_Cert.png";
 import skyScannerCert from "../../assets/SkyScanner_Cert.png";
 import codecCert from "../../assets/LOR-CodecTechnology.png";
-import codeAlphaCert from "../../assets/CodeAlphaOfferLetter.png";
+import codeAlphaCert from "../../assets/CodeAlpha_LOR.png";
 import { SectionHeader } from "./Section";
 
 interface ExperienceLink {
