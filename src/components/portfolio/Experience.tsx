@@ -39,7 +39,7 @@ const experiences: Experience[] = [
     date: "July 2026 - Aug 2026 ",
     location: "Lucknow, Uttar Pradesh, India (Remote)",
     type: "Internship",
-    status: "Ongoing",
+    status: "Completed",
     bullets: [
       "Developed cross-platform mobile applications using Flutter.",
       "Built real-world apps including FittPulse, Fluenta, and FlashMind.",
