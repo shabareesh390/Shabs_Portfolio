@@ -16,6 +16,7 @@ import certWalmart from "@/assets/walmart_Cert.png";
 import certQuantium from "@/assets/Quantium_Cert.png";
 import certSkyScanner from "@/assets/SkyScanner_Cert.png";
 import certCodec from "@/assets/CodecTechnology.png";
+import certIsro from "@/assets/isro_Cert.png";
 
 type Certificate = {
   title: string;
@@ -28,6 +29,14 @@ type Certificate = {
 };
 
 const certificates: Certificate[] = [
+  {
+    title: "AIML for Geodata Analytics",
+    issuer: "ISRO",
+    date: "August 2026",
+    image: certIsro,
+    tag: "Certification",
+    accent: "linear-gradient(135deg, #f97316, #ea580c)",
+  },
   {
     title: "Career Essentials in Generative AI",
     issuer: "Microsoft & LinkedIn",
