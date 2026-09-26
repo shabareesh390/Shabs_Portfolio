@@ -4,6 +4,7 @@ import tallymatchLogo from "@/assets/TallyMatch.png";
 import scamshieldLogo from "@/assets/scam_shield.png";
 import croplensLogo from "@/assets/CropLens.png";
 import codexHackathonCert from "@/assets/CodexHackathon.png";
+import sbiHackCert from "@/assets/SBI_Hack_Cert.png";
 import { ProjectCard, type Project } from "./Projects";
 
 export const hackathonProjects: Project[] = [
@@ -40,6 +41,7 @@ export const hackathonProjects: Project[] = [
     repo: "https://github.com/shabareesh390/CropLens",
     accent: "bg-teal-500",
     logo: croplensLogo,
+    certImage: sbiHackCert,
   },
 ];
 

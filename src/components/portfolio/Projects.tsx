@@ -122,13 +122,13 @@ export function ProjectCard({ p, i }: { p: Project; i: number }) {
           ))}
         </div>
 
-        <div className="mt-8 flex items-center gap-3">
+        <div className="mt-8 flex flex-col sm:flex-row flex-wrap gap-3">
           {p.repo && (
             <a
               href={p.repo}
               target="_blank"
               rel="noopener noreferrer"
-              className="secondary-btn w-full justify-center"
+              className="secondary-btn w-full sm:flex-1 justify-center"
             >
               <Github className="h-4 w-4 mr-2" />
               GitHub
@@ -139,7 +139,7 @@ export function ProjectCard({ p, i }: { p: Project; i: number }) {
               href={p.certImage}
               target="_blank"
               rel="noopener noreferrer"
-              className="secondary-btn w-full justify-center"
+              className="secondary-btn w-full sm:flex-1 justify-center"
             >
               <Award className="h-4 w-4 mr-2" />
               View Cert
@@ -150,14 +150,14 @@ export function ProjectCard({ p, i }: { p: Project; i: number }) {
               href={p.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="primary-btn w-full justify-center"
+              className="primary-btn w-full sm:flex-1 justify-center"
             >
               Live App
               <ArrowUpRight className="h-4 w-4 ml-1" />
             </a>
           )}
           {p.upcoming && (
-            <div className="primary-btn w-full justify-center opacity-80 cursor-default pointer-events-none hover:translate-y-0 hover:shadow-none">
+            <div className="primary-btn w-full sm:flex-1 justify-center opacity-80 cursor-default pointer-events-none hover:translate-y-0 hover:shadow-none">
               <Code2 className="h-4 w-4 mr-2" />
               In Progress
             </div>
