@@ -4,7 +4,7 @@ import { SectionHeader } from "./Section";
 import firenotesLogo from "@/assets/firenotes.png";
 import evalaILogo from "@/assets/evalai.png";
 import scamshieldLogo from "@/assets/scam_shield.png";
-import pathpilotLogo from "@/assets/PathPilot.png";
+// import pathpilotLogo from "@/assets/PathPilot.png";
 import croplensLogo from "@/assets/CropLens.png";
 import luxecartLogo from "@/assets/LuxeCart.png";
 import fittpulseLogo from "@/assets/FittPulse.jpg";
@@ -68,16 +68,7 @@ export const projects: Project[] = [
     accent: "bg-orange-500",
     logo: firenotesLogo,
   },
-  {
-    title: "PathPilot",
-    tag: "In Progress",
-    desc: "Currently building PathPilot — a smart campus navigation companion in Flutter for MITE. It will help students, faculty, and visitors locate classrooms, departments, and facilities through an interactive map and smart search. Work in progress.",
-    tech: ["Flutter", "Dart", "Material 3"],
-    Icon: MapPin,
-    accent: "bg-purple-500",
-    upcoming: true,
-    logo: pathpilotLogo,
-  },
+
 ];
 
 export function ProjectCard({ p, i }: { p: Project; i: number }) {
