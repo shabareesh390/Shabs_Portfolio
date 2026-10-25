@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight, Brain, Flame, Github, MapPin, Plus, Sparkles, Code2, Shield, ShoppingCart, Activity, Award } from "lucide-react";
+import { Brain, Flame, Github, MapPin, Plus, Sparkles, Code2, Shield, ShoppingCart, Activity, Award } from "lucide-react";
 import { SectionHeader } from "./Section";
 import firenotesLogo from "@/assets/firenotes.png";
 import evalaILogo from "@/assets/evalai.png";
@@ -16,7 +16,6 @@ export type Project = {
   desc: string;
   tech: string[];
   Icon: typeof MapPin;
-  href?: string;
   repo?: string;
   accent: string;
   upcoming?: boolean;
@@ -31,7 +30,6 @@ export const projects: Project[] = [
     desc: "Developed a Flutter-based mobile application that automates the grading of handwritten student answer sheets using Google Gemini AI. The app analyzes answers, compares them with expected responses, assigns marks, and generates personalized feedback highlighting strengths, weaknesses, and missing concepts. Built with Firebase for secure authentication and report storage, it also includes performance analytics dashboards, PDF report generation, and customizable grading settings to streamline the evaluation process for educators.",
     tech: ["Flutter", "Dart", "Google Gemini AI", "Firebase", "Provider", "fl_chart", "Google ML Kit", "PDF Generation", "Analytics"],
     Icon: Brain,
-    href: "https://drive.google.com/file/d/11B5Mq4TXP__74k8XXyxkLo07YFeXtzL1/view?usp=drive_link",
     repo: "https://github.com/shabareesh390/EvalAI",
     accent: "bg-indigo-500",
     logo: evalaILogo,
@@ -52,7 +50,6 @@ export const projects: Project[] = [
     desc: "Developed FittPulse, a premium cross-platform fitness tracking application during my Application Developer Internship at CodeAlpha. Built using Flutter, Firebase, and Google's Gemini API, the app provides an intelligent fitness companion with a modern dark-themed, glassmorphic UI. Key features include personalized workout and diet recommendations powered by Gemini AI, interactive dashboards for tracking health metrics, and secure real-time data synchronization via Firebase Auth and Cloud Firestore. The app delivers a premium user experience with smooth animations, page transitions, and responsive UI elements.",
     tech: ["Flutter", "Firebase", "Firestore", "Firebase Auth", "Google Gemini API", "fl_chart", "flutter_animate"],
     Icon: Activity,
-    href: "https://drive.google.com/file/d/1evbbcJKB3Xm7L50yvt78gwpggD5WIjPu/view?usp=drive_link",
     repo: "https://github.com/shabareesh390/CodeAlpha_FitnessTrackerApp",
     accent: "bg-rose-500",
     logo: fittpulseLogo,
@@ -63,7 +60,6 @@ export const projects: Project[] = [
     desc: "A full-stack mobile notes app built with Flutter and Firebase. Real-time note sync via Cloud Firestore, secure Email/Password and Google Sign-In, and a clean dark/light theme UI powered by Provider for state management.",
     tech: ["Flutter", "Dart", "Firebase Auth", "Cloud Firestore", "Provider", "Google Sign-In"],
     Icon: Flame,
-    href: "https://drive.google.com/file/d/1kyC65yI8rx0BnjAmBIAyzOy0k5x6i3bi/view?usp=drive_link",
     repo: "https://github.com/shabareesh390/FireNotes.git",
     accent: "bg-orange-500",
     logo: firenotesLogo,
@@ -134,17 +130,6 @@ export function ProjectCard({ p, i }: { p: Project; i: number }) {
             >
               <Award className="h-4 w-4 mr-2" />
               View Cert
-            </a>
-          )}
-          {p.href && (
-            <a
-              href={p.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="primary-btn w-full sm:flex-1 justify-center"
-            >
-              Live App
-              <ArrowUpRight className="h-4 w-4 ml-1" />
             </a>
           )}
           {p.upcoming && (
